@@ -1,0 +1,248 @@
+{
+    "BJJD": {
+        "Name": "普利司通-冬季胎",
+        "type_id": 1,
+        "flag": 1,
+        "status": 0
+    },
+    "dbdlp": {
+        "Name": "东风本田-邓禄普",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dbplst": {
+        "Name": "东风本田-普利司通",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dfbt": {
+        "Name": "东风本田",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dlp": {
+        "Name": "邓禄普-通用",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dz": {
+        "Name": "上汽大众",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dzdlp": {
+        "Name": "大众邓禄普",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dzgty": {
+        "Name": "大众固特异",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dzht": {
+        "Name": "大众韩泰",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dzjt": {
+        "Name": "大众佳通",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dzll": {
+        "Name": "大众玲珑轮胎",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dzmjs": {
+        "Name": "大众玛吉斯",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dzmp": {
+        "Name": "大众马牌",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "dzmql": {
+        "Name": "大众米其林",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "ftlk": {
+        "Name": "福特林肯",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "gqbt": {
+        "Name": "广汽本田",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "gqbtmjs": {
+        "Name": "广汽本田玛吉斯",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "gqbtplst": {
+        "Name": "广汽本田-普利司通",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "gqfyt": {
+        "Name": "广汽菲亚特",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "Jdbj": {
+        "Name": "普利司通-冬季胎",
+        "type_id": 1,
+        "flag": 1,
+        "status": 0
+    },
+    "jdbj": {
+        "Name": "京东-北京库",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "kdrd": {
+        "Name": "卡迪睿德",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "lkmp": {
+        "Name": "福特林肯-马牌",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "lksa": {
+        "Name": "雷克萨斯-普利司通",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "mp": {
+        "Name": "马牌",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "plst": {
+        "Name": "普利司通",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "S006": {
+        "Name": "通用",
+        "type_id": 1,
+        "flag": 1,
+        "status": 0
+    },
+    "S008": {
+        "Name": "普利司通",
+        "type_id": 1,
+        "flag": 1,
+        "status": 0
+    },
+    "S009": {
+        "Name": "普利司通",
+        "type_id": 1,
+        "flag": 1,
+        "status": 0
+    },
+    "S010": {
+        "Name": "普利司通",
+        "type_id": 1,
+        "flag": 1,
+        "status": 0
+    },
+    "S027": {
+        "Name": "广汽本田",
+        "type_id": 1,
+        "flag": 1,
+        "status": 0
+    },
+    "S036": {
+        "Name": "普利司通-冬季胎",
+        "type_id": 1,
+        "flag": 1,
+        "status": 0
+    },
+    "S042": {
+        "Name": "雷克萨斯",
+        "type_id": 1,
+        "flag": 1,
+        "status": 0
+    },
+    "ty": {
+        "Name": "上汽通用",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "tymp": {
+        "Name": "通用马牌",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "tyzx": {
+        "Name": "通用正新",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "VWDZ": {
+        "Name": "进口大众",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "vwmp": {
+        "Name": "进口大众-马牌",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "xqtplst": {
+        "Name": "上海新奇特",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "ytplst": {
+        "Name": "元通-普利司通",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "zjyt": {
+        "Name": "元通集团",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    }
+}

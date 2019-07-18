@@ -1,0 +1,9 @@
+# ignore list
+
+.DS_Store
+.git/
+.idea/
+*venv*/
+__pycache__
+
+
