@@ -5,6 +5,9 @@
 # Copyright 2018 SAIC Artificial Intelligence Lab. All Rights Reserved.
 # ----------------------------------------------------------------------
 from algorithms.algorithm_io import ImportData, ExportResults
+from flask import Flask, jsonify, request, Blueprint
+import json
+
 
 try:
     from algorithms.src.basic.tictoc import TicToc
@@ -20,6 +23,9 @@ except ImportError:
     from algorithms.lib.core import intra_city
     from algorithms.lib.core import mysql_io
     from algorithms.lib.core import mysql_io_af
+
+# app = Flask(__name__)
+blueprint_main = Blueprint(name='blueprint_main', import_name=__name__)
 
 
 def update_order(sql):
@@ -62,7 +68,7 @@ def update_inventory_list2(sql):
     return inventory_data_af
 
 
-def run(date0, date1, num_car):
+def run(date0, date1='2999-01-01', num_car=1):
 
     TicToc.tic()
 
@@ -74,13 +80,19 @@ def run(date0, date1, num_car):
 
     print('================================================================================')
 
+    # order_dict = update_order(
+    #     "SELECT * FROM logistics_oms.oms_shipper_order where confirm_date > " + date0 +
+    #     " and confirm_date < " + date1 + " and status = 1 and eid = 'aifuyi';")
     order_dict = update_order(
-        "SELECT * FROM logistics_oms.oms_shipper_order where confirm_date > " + date0 +
-        " and confirm_date < " + date1 + " and status = 1 and eid = 'aifuyi';")
+        'SELECT * FROM logistics_oms.oms_shipper_order where confirm_date > "' + date0 +
+        '" and status = 1 and eid = "aifuyi";')
     # 订单
+    # order_list_dict = update_order_list(
+    #     "SELECT * FROM logistics_oms.oms_shipper_order_list where create_time > " + date0 +
+    #     " and create_time < " + date1 + " and status = 1 and eid = 'aifuyi';")
     order_list_dict = update_order_list(
-        "SELECT * FROM logistics_oms.oms_shipper_order_list where create_time > " + date0 +
-        " and create_time < " + date1 + " and status = 1 and eid = 'aifuyi';")
+        'SELECT * FROM logistics_oms.oms_shipper_order_list where create_time > "' + date0 +
+        '" and status = 1 and eid = "aifuyi";')
     # 订单详情
     inventory_dict = update_inventory_list(
         "SELECT * FROM logistics_wms.wms_inventory_list where inventory > '20190501000' and eid = 'aifuyi';")
@@ -159,27 +171,66 @@ def run(date0, date1, num_car):
     print('================================================================================')
 
     TicToc.toc()
+    recall_info = '算法已完成'
+    final_recall(recall_info)
     return [[automatic_loading_result, route_result, error_list, success_list,
              inventory_dict, cost000, num_today, num_in_station],
             [automatic_loading_result2, route_result2, error_list2, success_list2,
              inventory_dict2, cost0002, num_today2, num_in_station2]]
 
 
+@blueprint_main.route('/run', methods=['GET', 'POST'])
+def algorithm_main():
+    print('Algorithm started')
+    if request.method == 'GET':
+        return jsonify({"description": "Algorithm Post Request", "status": "UP"})
+    elif request.method == 'POST':
+        json_post_information = json.loads(request.get_data())
+        import _thread
+        _thread.start_new_thread(run, (json_post_information, ))
+        return jsonify({"running status": 'success'})
+    else:
+        return 'Algorithm post request failed'
+
+
+def final_recall(recall_info):
+    # authen_info = {'userName': 'zhengzhou', 'password': 'zhengzhou'}
+    # token_info = request.post(url="http://10.135.80.122:8090/api/ai/gateway/security/authenticate",
+    #                           json=authen_info)
+    # id_token = token_info.json()['data']['id_token']
+    #
+    # print(json.dumps(recall_info, indent=4, ensure_ascii=False))
+    # r = request.post(url='http://10.135.80.122:8090/zzpwarndata/api/ai/warnData/log/update',
+    #                   headers={'authorization': id_token}, json=recall_info)
+    # print(r.json())
+    print(recall_info)
+
+
+def flask_test():
+    url = 'http://127.0.0.1:9000/clean'
+    data = '2019-07-22'
+    rq = request.post(url=url, json=data)
+    print(rq.text)
+
+
 if __name__ == '__main__':
 
-    Cost_default = []
-    Num_station = []
-    Cost_default2 = []
-    Num_station2 = []
-    for i in range(1, 2):
-        Date0 = "'2019-07-" + str(i).zfill(2) + " 10:00:00'"
-        Date1 = "'2019-07-" + str(i+1).zfill(2) + " 10:00:00'"
-        print(Date0 + '~' + Date1)
-        Num_car = 1
-        [Result, Route, Error_list, Success_list, Inventory_dict, Cost000, Num_today, Num_in_station], \
-        [Result2, Route2, Error_list2, Success_list2, Inventory_dict2, Cost0002, Num_today2, Num_in_station2] \
-            = run(Date0, Date1, Num_car)
-        Cost_default.append(Cost000)
-        Num_station.append(Num_today)
-        Cost_default2.append(Cost0002)
-        Num_station2.append(Num_today2)
+    app_test = Flask(__name__)
+    app_test.register_blueprint(blueprint_main)
+    app_test.run(host="127.0.0.1", port=9000, debug=False)
+    #
+    #  Cost_default = []
+    #  Num_station = []
+    #  Cost_default2 = []
+    #  Num_station2 = []
+    #  for i in range(1, 2):
+    #      Date0 = "'2019-07-" + str(i).zfill(2) + " 10:00:00'"
+    #      Date1 = "'2019-07-" + str(i+1).zfill(2) + " 10:00:00'"
+    #      print(Date0 + '~' + Date1)
+    #      [Result, Route, Error_list, Success_list, Inventory_dict, Cost000, Num_today, Num_in_station], \
+    #      [Result2, Route2, Error_list2, Success_list2, Inventory_dict2, Cost0002, Num_today2, Num_in_station2] \
+    #          = run(Date0, Date1)
+    #      Cost_default.append(Cost000)
+    #      Num_station.append(Num_today)
+    #      Cost_default2.append(Cost0002)
+    #      Num_station2.append(Num_today2)
