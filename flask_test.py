@@ -3,7 +3,7 @@ import requests
 
 def flask_test():
     url = 'http://127.0.0.1:9000/run'
-    data = '2019-07-05'
+    data = '2019-07-21'
     rq = requests.post(url=url, json=data)
     print(rq.text)
 

@@ -7,6 +7,7 @@
 from algorithms.algorithm_io import ImportData, ExportResults
 from flask import Flask, jsonify, request, Blueprint
 import json
+import os
 
 
 try:
@@ -194,15 +195,11 @@ def algorithm_main():
 
 
 def final_recall(recall_info):
-    # authen_info = {'userName': 'zhengzhou', 'password': 'zhengzhou'}
-    # token_info = request.post(url="http://10.135.80.122:8090/api/ai/gateway/security/authenticate",
-    #                           json=authen_info)
-    # id_token = token_info.json()['data']['id_token']
-    #
-    # print(json.dumps(recall_info, indent=4, ensure_ascii=False))
-    # r = request.post(url='http://10.135.80.122:8090/zzpwarndata/api/ai/warnData/log/update',
-    #                   headers={'authorization': id_token}, json=recall_info)
-    # print(r.json())
+    output_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))) \
+                 + '/FE-Tyre/data/output/'
+    # request.post(url='http://10.135.80.122:8090/zzpwarndata/api/ai/warnData/log/update',
+    #              json=output_dir)
+    print(output_dir)
     print(recall_info)
 
 
