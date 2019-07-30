@@ -679,6 +679,16 @@
         "storage_id": "000022",
         "creat_time": "2019-01-21 13:49:31"
     },
+    "0007714793_tAWLYXmhFYCbsugMiUKObvtzSRuOAnmj": {
+        "Name": "lbb",
+        "Prov": "无",
+        "City": "无",
+        "Address": "上海市浦东新区盛荣路188弄1号5号",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-19 06:05:42"
+    },
     "0007714793_tzbs_SfbPpVwKhaCoCkZHkUWOyYJWojXmAMuR": {
         "Name": "淘真柏胜",
         "Prov": "无",
@@ -1809,6 +1819,86 @@
         "storage_id": "000022",
         "creat_time": "2019-06-20 11:46:16"
     },
+    "000771493_gybqxd_vZcJUHNSCqLHCIzdohmuWfiFvALuwjOy": {
+        "Name": "高玉宝",
+        "Prov": "无",
+        "City": "无",
+        "Address": "浙江省金华市义乌市城中北路福田二区47栋",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-23 18:23:44"
+    },
+    "000771493_hzjcz_hDEvtWKjpdJQVqeMwjeREJxAYYwBEhzH": {
+        "Name": "陈韶红",
+        "Prov": "无",
+        "City": "无",
+        "Address": "浙江省宁波市鄞州区天童南路与姜丽路交叉口东南50米",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-15 13:13:34"
+    },
+    "000771493_hzjcz_MuAEWauKpOmXkcXgyLJowtAlhEmpYpXE": {
+        "Name": "魏佳锋",
+        "Prov": "无",
+        "City": "无",
+        "Address": "宁波市慈溪市浒山街道南二环中路299-301号",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-24 10:16:15"
+    },
+    "000771493_hzjcz_RVoTYtjTOgzfpWDCnSIZvDQwJOlEfqmR": {
+        "Name": "廖兴志",
+        "Prov": "无",
+        "City": "无",
+        "Address": "宁波市鄞州区五乡镇五乡西路162号",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-22 08:42:31"
+    },
+    "000771493_hzjcz_TbpRkWYihSkSjKuStskdCRFIneMxmUrQ": {
+        "Name": "董旭青",
+        "Prov": "无",
+        "City": "无",
+        "Address": "宁波市余姚市三七市安捷东路192号",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-17 16:52:17"
+    },
+    "000771493_hzjcz_uYOeQsVOIJTpddJcZeYBFSwIfzxiGGgo": {
+        "Name": "孙苏安",
+        "Prov": "无",
+        "City": "无",
+        "Address": "宁波市鄞州区潘火街道百丈东路1382-1384号",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-26 14:38:16"
+    },
+    "000771493_hztzhj_VKIZdshExmcDNuALrYpqYntMUoNOkaxk": {
+        "Name": "淘真恒吉",
+        "Prov": "无",
+        "City": "无",
+        "Address": "杭州市西湖区转塘街道岭上花苑19幢2号",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-19 15:26:28"
+    },
+    "000771493_hztzwysxxl_mPfgXfiZyEPPtKQTcDrEveXjmYFJZRYr": {
+        "Name": "饶金红",
+        "Prov": "无",
+        "City": "无",
+        "Address": "金华市武义县温泉南路129号",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-15 19:16:24"
+    },
     "000771493_tyqc_KmkSAIUcFHGNCzFfDBisufSbDxwQRGTS": {
         "Name": "庄超",
         "Prov": "无",
@@ -2278,6 +2368,16 @@
         "status": 1,
         "storage_id": "000022",
         "creat_time": "2019-03-15 10:52:27"
+    },
+    "0007716271_iKrUNIbnXANZSaEXVtjmNtVnVUzsrpaF": {
+        "Name": "江海甬",
+        "Prov": "无",
+        "City": "无",
+        "Address": "浙江省宁波市北仑区小港东海路352-358号浙江省宁波市北仑区小港东海路352-358号",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-27 09:10:32"
     },
     "0007913910": {
         "Name": "杭州德轮贸易有限公司",
@@ -3863,7 +3963,7 @@
         "Name": "上海东昌",
         "Prov": "上海",
         "City": "上海",
-        "Address": "上海市浦建路1281号",
+        "Address": "上海市浦建路1281号东昌别克",
         "shipper_id": "ty",
         "status": 1,
         "storage_id": "000003",
@@ -5930,7 +6030,7 @@
         "creat_time": "2017-06-24 23:25:03"
     },
     "2100636": {
-        "Name": "安徽申通",
+        "Name": "安徽申通（只发跨越）",
         "Prov": "安徽",
         "City": "合肥",
         "Address": "安徽省合肥市长江西路北蜀山区合六路88号",
@@ -11103,7 +11203,7 @@
         "Name": "永康骏鑫",
         "Prov": "浙江省",
         "City": "永康市",
-        "Address": "浙江省永康市经济开发区科源路165号",
+        "Address": "浙江省永康市经济开发区九龙北路67号",
         "shipper_id": "ty",
         "status": 1,
         "storage_id": "000003",
@@ -12433,7 +12533,7 @@
         "Name": "桐城锦通",
         "Prov": "安徽省",
         "City": "桐城市",
-        "Address": "桐城市龙眠街道金大地创业园北一路",
+        "Address": "安庆市桐城市金大地工业区北一路",
         "shipper_id": "ty",
         "status": 1,
         "storage_id": "000003",
@@ -12453,7 +12553,7 @@
         "Name": "天津汇益",
         "Prov": "天津市",
         "City": "天津市",
-        "Address": "天津市空港经济区中环西路79号",
+        "Address": "天津市东丽区空港物流加工区中环西路79号",
         "shipper_id": "ty",
         "status": 1,
         "storage_id": "000010",
@@ -12540,7 +12640,7 @@
         "creat_time": "2018-03-10 12:02:10"
     },
     "2101388": {
-        "Name": "濮阳通达",
+        "Name": "濮阳通达  圆通不到",
         "Prov": "河南省",
         "City": "濮阳市",
         "Address": "濮阳市盘锦路与卫都路交叉口向南50米路东（花乡二手车对面）",
@@ -12978,6 +13078,16 @@
         "status": 1,
         "storage_id": -1,
         "creat_time": "2019-05-06 12:01:38"
+    },
+    "2101443": {
+        "Name": "福建锦轮",
+        "Prov": "无",
+        "City": "无",
+        "Address": "福建省泉州市晋江市新塘街道后洋南区156号锦轮汽车城内",
+        "shipper_id": "ty",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-17 11:42:37"
     },
     "2101445": {
         "Name": "武汉中南三喜",
@@ -14133,7 +14243,7 @@
         "Name": "浙江元通兰通",
         "Prov": "浙江",
         "City": "杭州",
-        "Address": "浙江省杭州市绍兴市402号",
+        "Address": "杭州市下城区绍兴路402号",
         "shipper_id": "ty",
         "status": 1,
         "storage_id": "000003",
@@ -21270,10 +21380,10 @@
         "creat_time": "2017-06-24 23:25:28"
     },
     "2201014": {
-        "Name": "濮阳市通达",
+        "Name": "濮阳市通达  圆通不到",
         "Prov": "河南",
         "City": "濮阳",
-        "Address": "濮阳市中原路与106国道交叉口向北300米路东",
+        "Address": "濮阳市盘锦路与卫都路交叉口花乡二手车对过",
         "shipper_id": "ty",
         "status": 1,
         "storage_id": "000014",
@@ -21778,6 +21888,16 @@
         "status": 1,
         "storage_id": -1,
         "creat_time": "2019-06-07 12:05:49"
+    },
+    "2201111": {
+        "Name": "潍坊瑞和",
+        "Prov": "无",
+        "City": "无",
+        "Address": "山东省潍坊市奎文区潍州路418号6排1号",
+        "shipper_id": "ty",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-23 09:34:33"
     },
     "2300000": {
         "Name": "上海安吉名世",
@@ -24338,6 +24458,16 @@
         "status": 1,
         "storage_id": -1,
         "creat_time": "2019-02-20 15:52:08"
+    },
+    "2300386": {
+        "Name": "驻马店威佳",
+        "Prov": "无",
+        "City": "无",
+        "Address": "河南省驻马店市驿城区纬四路东段",
+        "shipper_id": "ty",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-16 11:52:50"
     },
     "2300387": {
         "Name": "河南通达美凯",
@@ -30189,6 +30319,16 @@
         "storage_id": -1,
         "creat_time": "2019-01-28 16:18:48"
     },
+    "2700580": {
+        "Name": "东莞志诚寮步",
+        "Prov": "无",
+        "City": "无",
+        "Address": "东莞市寮步镇横坑管理区莞樟公路志诚车行内",
+        "shipper_id": "ty",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-23 13:36:33"
+    },
     "2700604": {
         "Name": "桐乡铭利",
         "Prov": "无",
@@ -30199,6 +30339,16 @@
         "storage_id": -1,
         "creat_time": "2019-06-24 12:46:33"
     },
+    "2700645": {
+        "Name": "铁岭上通",
+        "Prov": "无",
+        "City": "无",
+        "Address": "辽宁省铁岭市经济开发区一委",
+        "shipper_id": "ty",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-16 13:50:40"
+    },
     "2700651": {
         "Name": "山西享泰",
         "Prov": "无",
@@ -30208,6 +30358,16 @@
         "status": 1,
         "storage_id": -1,
         "creat_time": "2019-06-12 09:26:28"
+    },
+    "2700656": {
+        "Name": "山东玲珑",
+        "Prov": "无",
+        "City": "无",
+        "Address": "山东省招远市普照路186号（别克4S店）",
+        "shipper_id": "ty",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-16 13:50:40"
     },
     "2700665": {
         "Name": "新昌和诚",
@@ -30228,6 +30388,16 @@
         "status": 1,
         "storage_id": -1,
         "creat_time": "2019-07-08 15:42:27"
+    },
+    "2700702": {
+        "Name": "丰城龙润",
+        "Prov": "无",
+        "City": "无",
+        "Address": "江西省宜春市丰城市物华路龙润广场6栋",
+        "shipper_id": "ty",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-18 11:31:25"
     },
     "28010": {
         "Name": "上海永达启明汽车销售服务有限公司",
@@ -32143,7 +32313,7 @@
         "Name": "邯郸市誉丰汽车销售有限责任公司",
         "Prov": "河北省",
         "City": "邯郸市",
-        "Address": "河北省邯郸市雪驰路与东环路交叉口南行100米路东",
+        "Address": "河北省邯郸市邯山区雪驰路与东环路交叉口南行100米路东",
         "shipper_id": "dz",
         "status": 1,
         "storage_id": "000010",
@@ -32293,7 +32463,7 @@
         "Name": "石家庄众德盛汽车销售服务有限公司",
         "Prov": "河北省",
         "City": "石家庄市",
-        "Address": "石家庄市北外环路8号胜利大街与古城东路交叉口东行500米路南",
+        "Address": "石家庄市长安区北外环路8号胜利大街与古城东路交叉口东行500米路南",
         "shipper_id": "dz",
         "status": 1,
         "storage_id": "000010",
@@ -35808,6 +35978,16 @@
         "status": 1,
         "storage_id": "000003",
         "creat_time": "2017-06-25 06:10:02"
+    },
+    "74309551": {
+        "Name": "宿迁盛辉腾骏汽车销售服务有限公司",
+        "Prov": "无",
+        "City": "无",
+        "Address": "宿迁市泗洪县青阳镇国际汽车城",
+        "shipper_id": "dz",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-23 15:46:14"
     },
     "74309570": {
         "Name": "常熟市乐众汽车销售服务有限公司",
@@ -43589,6 +43769,16 @@
         "storage_id": -1,
         "creat_time": "2019-02-21 08:42:38"
     },
+    "74319890": {
+        "Name": "济源市众昌汽车销售有限公司",
+        "Prov": "无",
+        "City": "无",
+        "Address": "河南省济源市沁园路北段上汽大众4S店内（济源众昌）",
+        "shipper_id": "dz",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-21 09:07:28"
+    },
     "74320011": {
         "Name": "成都国跃车业有限公司",
         "Prov": "四川省",
@@ -46313,7 +46503,7 @@
         "Name": "海南澳众汽车销售服务有限公司",
         "Prov": "海南省",
         "City": "海口市",
-        "Address": "海南省海口市琼山区琼山大道232号上汽大众（机场方向下琼州大桥2公里处）",
+        "Address": "海南省海口市美兰区琼山大道232号上汽大众（机场方向下琼州大桥2公里处）",
         "shipper_id": "dz",
         "status": 1,
         "storage_id": "000008",
@@ -47873,7 +48063,7 @@
         "Name": "单县众友汽车销售服务有限公司",
         "Prov": "山东省",
         "City": "菏泽市",
-        "Address": "山东省菏泽市单县健康路136号",
+        "Address": "山东省菏泽市单县震华汽车城北临",
         "shipper_id": "dz",
         "status": 1,
         "storage_id": "000003",
@@ -69426,7 +69616,7 @@
         "Address": "北京市丰台区南四环中路161号,邮编:100036",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960100400": {
@@ -69456,7 +69646,7 @@
         "Address": "辽宁省大连甘井子区华北路738号,邮编:116602",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960100900": {
@@ -69466,7 +69656,7 @@
         "Address": "北京市昌平区新亚运村汽车交易市场B区A02,邮编:102209",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960101000": {
@@ -69566,7 +69756,7 @@
         "Address": "北京市海淀区西北旺镇百旺绿谷汽车园,邮编:100095",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960102400": {
@@ -69576,7 +69766,7 @@
         "Address": "山西省太原市平阳南路6号南中环街红三角汽车广场一层,邮编:030032",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960102500": {
@@ -69586,7 +69776,7 @@
         "Address": "河北石家庄市北二环东路68号河北国际汽车园区,邮编:050043",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960102600": {
@@ -69596,7 +69786,7 @@
         "Address": "内蒙古呼和浩特市回民区海拉尔西路利丰汽车城东300米,邮编：010010",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960102700": {
@@ -69646,7 +69836,7 @@
         "Address": "吉林省长春市经济技术开发区东环城路10056号,邮编:130031",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960103200": {
@@ -69656,7 +69846,7 @@
         "Address": "辽宁省沈阳市于洪区沈大路89号",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960103300": {
@@ -69706,7 +69896,7 @@
         "Address": "黑龙江省哈尔滨道外区先锋路469号,邮编:150056",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960103800": {
@@ -69726,7 +69916,7 @@
         "Address": "天津空港加工区汽车园中路12号,邮编:300301",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960104100": {
@@ -69776,7 +69966,7 @@
         "Address": "辽宁省沈阳市铁西区北二中路11号,邮编:110021",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960104600": {
@@ -69846,7 +70036,7 @@
         "Address": "河北省唐山市开平区开越路299号A区2号,邮编:063001",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960105600": {
@@ -69916,7 +70106,7 @@
         "Address": "内蒙古鄂尔多斯市包府路铜川镇汽车博览园进口大众德众鑫4S店,邮编:017000",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960106300": {
@@ -70026,7 +70216,7 @@
         "Address": "天津市西青经济开发区津赛达零支路与赛达世纪大道交口,邮编:300385",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960107500": {
@@ -70036,7 +70226,7 @@
         "Address": "大同市南环路西延段东侧庞大汽车文化园林广场,邮编:037010",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960107600": {
@@ -70056,7 +70246,7 @@
         "Address": "内蒙古包头市昆都仑区白云路南端,邮编:014010",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960107800": {
@@ -70116,7 +70306,7 @@
         "Address": "内蒙古包头市稀土高新区稀土路15号,邮编:014030",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960108600": {
@@ -70126,7 +70316,7 @@
         "Address": "吉林省长春市西新经济技术开发区长沈路4222号,邮编:130103",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960108700": {
@@ -70366,7 +70556,7 @@
         "Address": "鄂尔多斯市伊金霍洛旗空港科技园区经三南路与纬十七路交汇路口（机场正北5公里）",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960112500": {
@@ -70376,7 +70566,7 @@
         "Address": "河北省唐山市路南区唐柏路60号,邮编:063000",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960112800": {
@@ -70386,7 +70576,7 @@
         "Address": "哈尔滨市道里区机场路161-1号，邮编：150070",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960113200": {
@@ -70406,7 +70596,7 @@
         "Address": "北京市朝阳区将台乡坝河北岸8号",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960113700": {
@@ -70416,7 +70606,7 @@
         "Address": "河北省邯郸市高开区世纪大街一号庞大兴锐进口大众",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-05-31 15:32:55"
     },
     "7960113800": {
@@ -70496,7 +70686,7 @@
         "Address": "锡林浩特市火车站北公铁立交桥西（民禾物流园），邮编：026000",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960116200": {
@@ -70516,13 +70706,13 @@
         "Address": "河北省石家庄市北二环西路35号,邮编050000",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7960116400": {
         "Name": "上海静众",
-        "Prov": "无",
-        "City": "无",
+        "Prov": "",
+        "City": "",
         "Address": "上海市静安区康定路1155号（近武宁南路）",
         "shipper_id": "VWDZ",
         "status": 1,
@@ -70546,7 +70736,7 @@
         "Address": "太原市万柏林区迎泽西大街铁道西侧闫家沟村铁西综合楼29号楼，邮编030024",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:31"
     },
     "7960116700": {
@@ -70586,7 +70776,7 @@
         "Address": "长治市北外环路机场转盘一公里处，邮编046000",
         "shipper_id": "VWDZ",
         "status": 1,
-        "storage_id": "000003",
+        "storage_id": "000010",
         "creat_time": "2019-04-29 12:19:30"
     },
     "7999991": {
@@ -72470,10 +72660,10 @@
         "creat_time": "2017-10-27 22:10:36"
     },
     "CJ0780084": {
-        "Name": "太原泽光",
+        "Name": "山西越驰吉普汽车销售服务有限公司",
         "Prov": "山西省",
         "City": "太原",
-        "Address": "山西省太原市万柏林区新晋祠路36号汇豪新能源汽贸城",
+        "Address": "山西省太原市小店区龙城大街东口聚海物流中心",
         "shipper_id": "gqfyt",
         "status": 1,
         "storage_id": "000010",
@@ -74550,7 +74740,7 @@
         "creat_time": "2017-11-29 11:25:52"
     },
     "CJ0790104": {
-        "Name": "杭州百源",
+        "Name": "杭州百源汽车销售服务有限公司",
         "Prov": "浙江省",
         "City": "杭州",
         "Address": "浙江省杭州市萧山区金城路2669号",
@@ -75360,7 +75550,7 @@
         "creat_time": "2017-10-27 22:10:36"
     },
     "CJ3753601": {
-        "Name": "潍坊鑫锐",
+        "Name": "潍坊鑫锐汽车销售服务有限公司",
         "Prov": "山东省",
         "City": "潍坊",
         "Address": "山东省潍坊市奎文区潍州路广潍集团对面",
@@ -75470,7 +75660,7 @@
         "creat_time": "2017-10-27 22:10:36"
     },
     "CJ4271401": {
-        "Name": "黄石腾达",
+        "Name": "黄石全柴腾达汽车销售服务有限公司",
         "Prov": "湖北省",
         "City": "黄石",
         "Address": "湖北省黄石市黄金山工业新区大棋路汽车市场356号广汽菲亚特4S店",
@@ -75909,6 +76099,16 @@
         "storage_id": "000010",
         "creat_time": "2018-09-27 13:41:41"
     },
+    "cs00002_ZnJpyBsYOhpzCKPWktYNdsMwCqdgfOtd": {
+        "Name": "廖兴志",
+        "Prov": "无",
+        "City": "无",
+        "Address": "浙江省宁波市五乡镇五乡西路162号",
+        "shipper_id": "mp",
+        "status": 1,
+        "storage_id": "000022",
+        "creat_time": "2019-07-25 12:16:06"
+    },
     "DAH001": {
         "Name": "安徽安田汽车贸易股份有限公司",
         "Prov": "安徽省",
@@ -76243,7 +76443,7 @@
         "Name": "重庆新亚汽车销售服务有限公司",
         "Prov": "重庆市",
         "City": "重庆市",
-        "Address": "重庆九龙坡区谢陈路 3 号",
+        "Address": "重庆九龙坡区龙腾大道163号",
         "shipper_id": "gqbt",
         "status": 1,
         "storage_id": "000011",
@@ -82933,7 +83133,7 @@
         "Name": "银川上陵",
         "Prov": "宁夏",
         "City": "银川市",
-        "Address": "宁夏银川市德胜工业园区虹桥路与永胜路交叉口西北角",
+        "Address": "宁夏银川德胜工业园区虹桥路与永胜路交叉口西北角",
         "shipper_id": "lksa",
         "status": 1,
         "storage_id": "000011",
@@ -97969,6 +98169,16 @@
         "storage_id": -1,
         "creat_time": "2019-05-21 17:06:37"
     },
+    "T01501": {
+        "Name": "颜秉贤",
+        "Prov": "无",
+        "City": "无",
+        "Address": "上海市嘉定区塔山路305号",
+        "shipper_id": "dz",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-26 14:16:18"
+    },
     "test": {
         "Name": "测试企业",
         "Prov": "无",
@@ -98793,7 +99003,7 @@
         "Name": "东风本田汽车合荣特约销售服务店",
         "Prov": "广东省",
         "City": "湛江市",
-        "Address": "湛江市赤坎区东盛路7号海田国际车城内",
+        "Address": "广东省湛江市人民大道北50号(湛江车城对面)",
         "shipper_id": "dfbt",
         "status": 1,
         "storage_id": "000008",
@@ -98813,7 +99023,7 @@
         "Name": "东风本田汽车深业特约销售服务店",
         "Prov": "广东省",
         "City": "深圳市",
-        "Address": "广东省深圳市宝安区龙华工业西路与建设路交汇处(深圳市深业东本",
+        "Address": "深圳市龙华区龙华街道清湖社区清宁路恒博创新科技产业园一层(深圳市深业东本汽车销售服务有限公司）",
         "shipper_id": "dfbt",
         "status": 1,
         "storage_id": "000008",
@@ -99239,6 +99449,16 @@
         "storage_id": "000008",
         "creat_time": "2018-03-29 14:05:47"
     },
+    "WDGD073": {
+        "Name": "东风本田汽车东辉特约销售服务店",
+        "Prov": "无",
+        "City": "无",
+        "Address": "广东省中山市南区先施二路30号之一",
+        "shipper_id": "dfbt",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-19 13:15:17"
+    },
     "WDGD074": {
         "Name": "东风本田汽车广宝通特约销售服务店",
         "Prov": "无",
@@ -99248,6 +99468,16 @@
         "status": 1,
         "storage_id": -1,
         "creat_time": "2019-04-20 12:46:43"
+    },
+    "WDGD075": {
+        "Name": "东风本田汽车东远特约销售服",
+        "Prov": "无",
+        "City": "无",
+        "Address": "广东省东莞市常平镇环城路桥梓村路段余冚仔",
+        "shipper_id": "dfbt",
+        "status": 1,
+        "storage_id": -1,
+        "creat_time": "2019-07-16 13:20:25"
     },
     "WDGS001": {
         "Name": "东风本田汽车华泰昌特约销售服务店",
@@ -99593,7 +99823,7 @@
         "Name": "东风本田汽车同鑫特约销售服务店",
         "Prov": "海南省",
         "City": "海口市",
-        "Address": "海南省海口市丘海大道延长线（金盛达往南600米路东）",
+        "Address": "海南省海口市南海大道135号",
         "shipper_id": "dfbt",
         "status": 1,
         "storage_id": "000008",
@@ -102573,7 +102803,7 @@
         "Name": "东风本田汽车汇群特约销售服务店",
         "Prov": "陕西省",
         "City": "西安市",
-        "Address": "陕西省西安市高新区丈八三路26号",
+        "Address": "西安市高新区丈八三路26号",
         "shipper_id": "dfbt",
         "status": 1,
         "storage_id": "000014",

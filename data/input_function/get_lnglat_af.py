@@ -33,6 +33,7 @@ with open("receiver_dict2.json", "r", encoding="utf-8") as receiver_data:
 receiver_lng_lat_dict = {}
 num = 0
 wrong_num = 0
+error_list2 = []
 for key in Receiver_dict:
     if num > 8400:
         keyword = 'a22303754d8aa5c4a235a887f1034c34'
@@ -53,10 +54,14 @@ for key in Receiver_dict:
     else:
         receiver_lng_lat_dict.update({key: [[0, 0], '无']})
         wrong_num = wrong_num + 1
+        error_list2.append({key: address})
     num = num + 1
 print('num =', num)
 print('wrong_num =', wrong_num)
 
 json_str = json.dumps(receiver_lng_lat_dict, indent=4, ensure_ascii=False)
 with open('receiver_lng_lat_dict2.json', 'w') as json_file:
+    json_file.write(json_str)
+json_str = json.dumps(error_list2, indent=4, ensure_ascii=False)
+with open('receiver_lng_lat_error_list2.json', 'w') as json_file:
     json_file.write(json_str)

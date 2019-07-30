@@ -1,5 +1,5 @@
 from algorithms.src.core import pick_storage
-
+from operator import itemgetter
 
 def cost_calculate(dict_use, num):
     if not dict_use.__contains__('起步'):
@@ -26,8 +26,10 @@ def check_receiver_id(receiver_id):
 def automatic_loading(order_dict, order_list_dict,
                       storage_lng_lat_dict, receiver_lng_lat_dict, inventory_dict):
     loading_list = {}
+    big_order = []
+    big_order_check = []
     for order_code in order_dict:   # order_code 订单号
-        receiver_id = check_receiver_id(order_dict[order_code]['receiver_id'])  # 获取receiver_id 同时防止乱码
+        receiver_id = order_dict[order_code]['receiver_id']
         if receiver_lng_lat_dict.__contains__(order_dict[order_code]['receiver_id']):  # 获取站点经纬度
             receiver_lng_lat = receiver_lng_lat_dict[order_dict[order_code]['receiver_id']]
             if receiver_lng_lat == [0, 0]:
@@ -45,17 +47,41 @@ def automatic_loading(order_dict, order_list_dict,
                 quantity = order_list_dict[order_code][order_list_code]['quantity']
                 if receiver_lng_lat == ([0, 0], '无'):
                     storage_code = ['收货地址有误或缺失经纬度']
+                elif quantity > 9:
+                    big_order.append([quantity, order_list_dict[order_code][order_list_code], receiver_lng_lat,
+                                     order_code, order_list_code, receiver_id, cube, weight])
                 else:
                     [storage_code, inventory_dict] = pick_storage.pick_storage(
                         order_list_dict[order_code][order_list_code],
                         receiver_lng_lat, storage_lng_lat_dict, inventory_dict)
                 loading_list[receiver_id][order_code].update(
                     {order_list_code: {'storage_code': storage_code,
-                                       '体积': cube, '重量': weight, '条数': quantity}})
+                                       '体积': cube, '重量': weight, '条数': quantity,
+                                       '订单': order_list_dict[order_code][order_list_code]}})
                 # 录入选取的仓库 以及 订单货物的体积重量数量
         else:
             loading_list[receiver_id].update({order_code: '无订单内容'})
-    return [loading_list, inventory_dict]
+    # big order 排序, 最后依次挑选仓库
+    big_order.sort(key=itemgetter(0))
+    for i in range(len(big_order)):
+        [storage_code, inventory_dict] = pick_storage.pick_storage(
+            big_order[i][1], big_order[i][2], storage_lng_lat_dict, inventory_dict)
+        loading_list[big_order[i][5]][big_order[i][3]].update(
+            {big_order[i][4]: {'storage_code': storage_code,
+                               '体积': big_order[i][6], '重量': big_order[i][7], '条数': big_order[i][0],
+                               '订单': big_order[i][1]}})
+        if inventory_dict.__contains__(big_order[i][1]['cargo_id']):
+            stock_left = inventory_dict[big_order[i][1]['cargo_id']]
+        else:
+            stock_left = 0
+        big_order_check.append({'订单号': big_order[i][3],
+                                '子订单号': big_order[i][4],
+                                '站点': big_order[i][5],
+                                '仓库': storage_code,
+                                '数量': big_order[i][0],
+                                '货号': big_order[i][1]['cargo_id'],
+                                '剩余库存': stock_left})
+    return [loading_list, inventory_dict, big_order_check]
 
 
 def automatic_transport_plan(loading_list, receiver_transport_dict):
@@ -69,7 +95,7 @@ def automatic_transport_plan(loading_list, receiver_transport_dict):
                         '000014': 4,
                         '000022': 5,
                         '000001': 6,
-                        '000002': 7,}
+                        '000002': 7}
     storage0_use_dict = {0: '000003',
                          1: '000008',
                          2: '000010',
@@ -90,6 +116,7 @@ def automatic_transport_plan(loading_list, receiver_transport_dict):
             else:
                 for order_list_code in loading_list[receiver_id][order_code]:
                     info = loading_list[receiver_id][order_code][order_list_code]['storage_code'][0]
+                    order_info = loading_list[receiver_id][order_code][order_list_code]['订单']
                     storage_code_len = len(loading_list[receiver_id][order_code][order_list_code]['storage_code'])
                     plan = 0
                     if info == '收货地址有误或缺失经纬度':
@@ -157,7 +184,8 @@ def automatic_transport_plan(loading_list, receiver_transport_dict):
                                                      storage_info[1]
                             quantity_sum[storage_num] += storage_info[1]
                             order_use[storage_num].append([order_code, order_list_code,
-                                                           str(storage_info[1]) + '/' + str(storage_info_num_all)])
+                                                           str(storage_info[1]) + '/' + str(storage_info_num_all),
+                                                           order_info])
 
         for storage_num in range(8):
             if quantity_sum[storage_num] > 0:

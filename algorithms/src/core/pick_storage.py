@@ -46,7 +46,7 @@ def pick_storage(order, receiver_lng_lat, storage_lng_lat_dict, inventory_dict):
         for i in range(len(storage_list_by_distance)):
             storage_code = storage_list_by_distance[i]
             if inventory_dict[cargo_id].__contains__(storage_code):
-                inventory_num += max(inventory_dict[cargo_id][storage_code][1], 0)
+                inventory_num += max(inventory_dict[cargo_id][storage_code], 0)
         if inventory_num < quantity:
             storage_code_use.append('所有仓库库存总和不足')
         else:
@@ -55,9 +55,9 @@ def pick_storage(order, receiver_lng_lat, storage_lng_lat_dict, inventory_dict):
                 storage_code_use.append('无默认仓库')
             else:
                 if inventory_dict[cargo_id].__contains__(storage_code):
-                    if quantity <= inventory_dict[cargo_id][storage_code][1]:
+                    if quantity <= inventory_dict[cargo_id][storage_code]:
                         storage_code_use.append('默认仓库库存足够')
-                    elif inventory_dict[cargo_id][storage_code][1] == 0:
+                    elif inventory_dict[cargo_id][storage_code] == 0:
                         storage_code_use.append('默认仓库断货')
                     else:
                         storage_code_use.append('默认仓库库存不足')
@@ -68,18 +68,17 @@ def pick_storage(order, receiver_lng_lat, storage_lng_lat_dict, inventory_dict):
             while quantity > 0:
                 storage_code = storage_list_by_distance[i]
                 if inventory_dict[cargo_id].__contains__(storage_code):
-                    if quantity <= inventory_dict[cargo_id][storage_code][1]:
+                    if quantity <= inventory_dict[cargo_id][storage_code]:
                         storage_code_use.append([storage_code, quantity])
                         quantity = 0
                     else:
-                        if inventory_dict[cargo_id][storage_code][1] > 0:
-                            storage_code_use.append([storage_code, inventory_dict[cargo_id][storage_code][1]])
-                            quantity = quantity - inventory_dict[cargo_id][storage_code][1]
-                            inventory_dict[cargo_id][storage_code][1] = 0
+                        if inventory_dict[cargo_id][storage_code] > 0:
+                            storage_code_use.append([storage_code, inventory_dict[cargo_id][storage_code]])
+                            quantity = quantity - inventory_dict[cargo_id][storage_code]
+                            inventory_dict[cargo_id][storage_code] = 0
                 i += 1
     else:
         storage_code_use.append('查无此货')
-
     return [storage_code_use, inventory_dict]
 
 
@@ -101,11 +100,11 @@ if __name__ == '__main__':
                             "000011": [104.24989, 30.745081],
                             "000014": [114.08502, 30.631004],
                             "000022": [120.19554, 30.394239]}
-    inventory_dict_sample = {"ZTS-215-606-GV-CT1": {"000011": ["20190703006", 10],
-                                                    "000003": ["20190518023", -56],
-                                                    "000008": ["20190622004", 4],
-                                                    "000010": ["20190518060", 1],
-                                                    "000014": ["20190518077", 28]}}
+    inventory_dict_sample = {"ZTS-215-606-GV-CT1": {"000011": 10,
+                                                    "000003": -56,
+                                                    "000008": 4,
+                                                    "000010": 2,
+                                                    "000014": 28}}
     storage_code_use, inventory_dict = pick_storage(order_sample,
                                                     receiver_lng_lat_sample,
                                                     storage_lng_lat_dict,

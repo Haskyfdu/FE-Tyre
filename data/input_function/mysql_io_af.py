@@ -281,23 +281,23 @@ def sql_wms_inventory_list(sql):                 # SQL查询库存
 if __name__ == '__main__':
     # 输入
 
-    order_data = sql_order("SELECT * FROM logistics_oms.oms_shipper_order where confirm_date > '2019-07-02 00:00:00' "
-                           "and eid = 'af';")
-    json_str = json.dumps(order_data, indent=4, ensure_ascii=False)
-    with open('order_dict2.json', 'w') as json_file:
-        json_file.write(json_str)  # 输出为order_dict
-
-    order_list_data = sql_order_list(
-        "SELECT * FROM logistics_oms.oms_shipper_order_list where create_time > '2019-07-02 00:00:00' "
-        "and status > 0 and eid = 'af';")
-    json_str = json.dumps(order_list_data, indent=4, ensure_ascii=False)
-    with open('order_list_dict2.json', 'w') as json_file:
-        json_file.write(json_str)  # 输出为order_list_dict
-
-    ship_data = sql_ship("SELECT * FROM logistics_oms.oms_shipper where eid = 'af';")
-    json_str = json.dumps(ship_data, indent=4, ensure_ascii=False)
-    with open('ship_dict.json2', 'w') as json_file:
-        json_file.write(json_str)  # 输出为ship_dict
+    # order_data = sql_order("SELECT * FROM logistics_oms.oms_shipper_order where confirm_date > '2019-07-02 00:00:00' "
+    #                        "and eid = 'af';")
+    # json_str = json.dumps(order_data, indent=4, ensure_ascii=False)
+    # with open('order_dict2.json', 'w') as json_file:
+    #     json_file.write(json_str)  # 输出为order_dict
+    #
+    # order_list_data = sql_order_list(
+    #     "SELECT * FROM logistics_oms.oms_shipper_order_list where create_time > '2019-07-02 00:00:00' "
+    #     "and status > 0 and eid = 'af';")
+    # json_str = json.dumps(order_list_data, indent=4, ensure_ascii=False)
+    # with open('order_list_dict2.json', 'w') as json_file:
+    #     json_file.write(json_str)  # 输出为order_list_dict
+    #
+    # ship_data = sql_ship("SELECT * FROM logistics_oms.oms_shipper where eid = 'af';")
+    # json_str = json.dumps(ship_data, indent=4, ensure_ascii=False)
+    # with open('ship_dict.json2', 'w') as json_file:
+    #     json_file.write(json_str)  # 输出为ship_dict
 
     receiver_data = sql_receiver("SELECT * FROM logistics_oms.oms_receiver where status > 0 and eid = 'af';")
     json_str = json.dumps(receiver_data, indent=4, ensure_ascii=False)
@@ -310,19 +310,19 @@ if __name__ == '__main__':
     with open('receiver_transport_dict2.json', 'w') as json_file:
         json_file.write(json_str)  # 输出为receiver_transport_dict
 
-    tms_order_data = sql_tms_order("SELECT * FROM logistics_tms.tms_order where ship_time > '2019-06-10'"
-                                   "and eid = 'af';")
-    json_str = json.dumps(tms_order_data, indent=4, ensure_ascii=False)
-    with open('tms_order_dict2.json', 'w') as json_file:
-        json_file.write(json_str)  # 输出为tms_order_dict
-
-    tms_order_list_data = sql_tms_order_list("SELECT * FROM logistics_tms.tms_order_list where eid = 'af';")
-    json_str = json.dumps(tms_order_list_data, indent=4, ensure_ascii=False)
-    with open('tms_order_list_dict2.json', 'w') as json_file:
-        json_file.write(json_str)
-
-    wms_inventory_list_data = sql_wms_inventory_list("SELECT * FROM logistics_wms.wms_inventory_list "
-                                                     "where inventory  > '20190501000' and eid = 'af';")
-    json_str = json.dumps(wms_inventory_list_data, indent=4, ensure_ascii=False)
-    with open('wms_inventory_list_dict2.json', 'w') as json_file:
-        json_file.write(json_str)
+    # tms_order_data = sql_tms_order("SELECT * FROM logistics_tms.tms_order where ship_time > '2019-06-10'"
+    #                                "and eid = 'af';")
+    # json_str = json.dumps(tms_order_data, indent=4, ensure_ascii=False)
+    # with open('tms_order_dict2.json', 'w') as json_file:
+    #     json_file.write(json_str)  # 输出为tms_order_dict
+    #
+    # tms_order_list_data = sql_tms_order_list("SELECT * FROM logistics_tms.tms_order_list where eid = 'af';")
+    # json_str = json.dumps(tms_order_list_data, indent=4, ensure_ascii=False)
+    # with open('tms_order_list_dict2.json', 'w') as json_file:
+    #     json_file.write(json_str)
+    #
+    # wms_inventory_list_data = sql_wms_inventory_list("SELECT * FROM logistics_wms.wms_inventory_list "
+    #                                                  "where inventory  > '20190501000' and eid = 'af';")
+    # json_str = json.dumps(wms_inventory_list_data, indent=4, ensure_ascii=False)
+    # with open('wms_inventory_list_dict2.json', 'w') as json_file:
+    #     json_file.write(json_str)

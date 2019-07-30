@@ -33,6 +33,7 @@ with open("receiver_dict.json", "r", encoding="utf-8") as receiver_data:
     Receiver_dict = json.load(receiver_data)  # 订单地址
 
 receiver_lng_lat_dict = {}
+error_list = []
 num = 0
 wrong_num = 0
 for key in Receiver_dict:
@@ -55,10 +56,14 @@ for key in Receiver_dict:
     else:
         receiver_lng_lat_dict.update({key: [[0, 0], '无']})
         wrong_num = wrong_num + 1
+        error_list.append({key: address})
     num = num + 1
 print('num =', num)
 print('wrong_num =', wrong_num)
 
 json_str = json.dumps(receiver_lng_lat_dict, indent=4, ensure_ascii=False)
 with open('receiver_lng_lat_dict.json', 'w') as json_file:
+    json_file.write(json_str)
+json_str = json.dumps(error_list, indent=4, ensure_ascii=False)
+with open('receiver_lng_lat_error_list.json', 'w') as json_file:
     json_file.write(json_str)

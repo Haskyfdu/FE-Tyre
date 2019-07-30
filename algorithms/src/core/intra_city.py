@@ -7,8 +7,11 @@ from algorithms.src.core import class_tsp_ga
 
 def intra_city_collect(result, receiver_lng_lat_dict):
     tsp_ac_data_set = []
+    tsp_ac_data_set_big = []
     num_in_station = []
+    num_in_station_big = []
     cost000 = 0
+    cost000_big = 0
     for i in range(len(result)):
         if receiver_lng_lat_dict.__contains__(result[i]['收货站点']):
             lng_lat = [receiver_lng_lat_dict[result[i]['收货站点']][0][0],
@@ -16,12 +19,20 @@ def intra_city_collect(result, receiver_lng_lat_dict):
                        result[i]['收货站点']]
             if lng_lat[0:2] != [0, 0] and pick_storage.calculate_distance(
                     lng_lat[0:2], [121.471555, 31.231404]) < 20000:
-                tsp_ac_data_set.append(lng_lat)
-                num_in_station.append({result[i]['收货站点']: result[i]['数量']})
-                cost000 += 4 * result[i]['数量']
+                if result[i]['数量'] < 10:
+                    tsp_ac_data_set.append(lng_lat)
+                    num_in_station.append({result[i]['收货站点']: result[i]['数量']})
+                    cost000 += 4 * result[i]['数量']
+                else:
+                    tsp_ac_data_set_big.append(lng_lat)
+                    num_in_station_big.append({result[i]['收货站点']: result[i]['数量']})
+                    cost000_big += 4 * result[i]['数量']
+
     print('上海市区20公里范围内配送：')
-    print('原有成本为' + str(cost000) + ' ,共计' + str(int(round(cost000/4))) + '条轮胎')
-    return [tsp_ac_data_set, cost000, num_in_station]
+    print('原有成本为' + str(cost000 + cost000_big) + ' ,共计' + str(int(round((cost000 + cost000_big)/4))) + '条轮胎,' +
+          str(len(num_in_station)+len(num_in_station_big)) + '个站点')
+    print('其中有' + str(len(num_in_station_big)) + '为大额订单,共计' + str(int(round(cost000_big/4))) + '条轮胎')
+    return [tsp_ac_data_set, cost000, num_in_station, tsp_ac_data_set_big, cost000_big, num_in_station_big]
 
 
 def k_means(tsp_ac_data_set, k):
@@ -96,8 +107,12 @@ def route(data_set, receiver_lng_lat_dict):
 
 
 def intra_city_service(result, receiver_lng_lat_dict, k):
-    tsp_ac_data_set, cost000, num_in_station = intra_city_collect(result, receiver_lng_lat_dict)
+    tsp_ac_data_set, cost000, num_in_station, tsp_ac_data_set_big, cost000_big, num_in_station_big \
+        = intra_city_collect(result, receiver_lng_lat_dict)
     num_station_today, data_set = k_means(tsp_ac_data_set, k)
+    num_station_today_big, data_set_big = k_means(tsp_ac_data_set_big, k)
     print('路线规划中...')
     route_result = route(data_set, receiver_lng_lat_dict)
-    return [route_result, cost000, num_station_today, num_in_station]
+    route_result_big = route(data_set_big, receiver_lng_lat_dict)
+    return [route_result, cost000, num_station_today, num_in_station,
+            route_result_big, cost000_big, num_station_today_big, num_in_station_big]
