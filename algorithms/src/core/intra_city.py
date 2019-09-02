@@ -13,13 +13,13 @@ def intra_city_collect(result, receiver_lng_lat_dict):
     cost000 = 0
     cost000_big = 0
     for i in range(len(result)):
-        if receiver_lng_lat_dict.__contains__(result[i]['收货站点']):
+        if result[i]['收货站点'] in receiver_lng_lat_dict:
             lng_lat = [receiver_lng_lat_dict[result[i]['收货站点']][0][0],
                        receiver_lng_lat_dict[result[i]['收货站点']][0][1],
                        result[i]['收货站点']]
             if lng_lat[0:2] != [0, 0] and pick_storage.calculate_distance(
                     lng_lat[0:2], [121.471555, 31.231404]) < 20000:
-                if result[i]['数量'] < 10:
+                if result[i]['数量'] < 50:
                     tsp_ac_data_set.append(lng_lat)
                     num_in_station.append({result[i]['收货站点']: result[i]['数量']})
                     cost000 += 4 * result[i]['数量']
@@ -28,10 +28,10 @@ def intra_city_collect(result, receiver_lng_lat_dict):
                     num_in_station_big.append({result[i]['收货站点']: result[i]['数量']})
                     cost000_big += 4 * result[i]['数量']
 
-    print('上海市区20公里范围内配送：')
-    print('原有成本为' + str(cost000 + cost000_big) + ' ,共计' + str(int(round((cost000 + cost000_big)/4))) + '条轮胎,' +
-          str(len(num_in_station)+len(num_in_station_big)) + '个站点')
-    print('其中有' + str(len(num_in_station_big)) + '为大额订单,共计' + str(int(round(cost000_big/4))) + '条轮胎')
+    # print('上海市区20公里范围内配送：')
+    # print('原有成本为' + str(cost000 + cost000_big) + ' ,共计' + str(int(round((cost000 + cost000_big)/4))) + '条轮胎,' +
+    #       str(len(num_in_station)+len(num_in_station_big)) + '个站点')
+    # print('其中有' + str(len(num_in_station_big)) + '为大额订单,共计' + str(int(round(cost000_big/4))) + '条轮胎')
     return [tsp_ac_data_set, cost000, num_in_station, tsp_ac_data_set_big, cost000_big, num_in_station_big]
 
 
@@ -61,18 +61,18 @@ def k_means(tsp_ac_data_set, k):
         x2 = np.array(x2)
         x3 = np.array(x3)
         # print(len(x0), len(x1), len(x2), len(x3))
-        plt.figure()
-        plt.scatter(x0[:, 0], x0[:, 1], c="red", marker='o', label='label0')
-        if k > 1:
-            plt.scatter(x1[:, 0], x1[:, 1], c="green", marker='o', label='label1')
-        if k > 2:
-            plt.scatter(x2[:, 0], x2[:, 1], c="blue", marker='o', label='label2')
-        if k > 3:
-            plt.scatter(x3[:, 0], x3[:, 1], c="red", marker='*', label='label3')
-        plt.scatter([121.304099], [31.352371], c="blue", marker='s', label='label4')
-        plt.scatter([121.58845], [31.164603], c="blue", marker='s', label='label5')
-        plt.legend(loc=2)
-        plt.show()
+        # plt.figure()
+        # plt.scatter(x0[:, 0], x0[:, 1], c="red", marker='o', label='label0')
+        # if k > 1:
+        #     plt.scatter(x1[:, 0], x1[:, 1], c="green", marker='o', label='label1')
+        # if k > 2:
+        #     plt.scatter(x2[:, 0], x2[:, 1], c="blue", marker='o', label='label2')
+        # if k > 3:
+        #     plt.scatter(x3[:, 0], x3[:, 1], c="red", marker='*', label='label3')
+        # plt.scatter([121.304099], [31.352371], c="blue", marker='s', label='label4')
+        # plt.scatter([121.58845], [31.164603], c="blue", marker='s', label='label5')
+        # plt.legend(loc=2)
+        # plt.show()
         y0 = []
         y1 = []
         y2 = []
@@ -111,7 +111,7 @@ def intra_city_service(result, receiver_lng_lat_dict, k):
         = intra_city_collect(result, receiver_lng_lat_dict)
     num_station_today, data_set = k_means(tsp_ac_data_set, k)
     num_station_today_big, data_set_big = k_means(tsp_ac_data_set_big, k)
-    print('路线规划中...')
+    # print('路线规划中...')
     route_result = route(data_set, receiver_lng_lat_dict)
     route_result_big = route(data_set_big, receiver_lng_lat_dict)
     return [route_result, cost000, num_station_today, num_in_station,

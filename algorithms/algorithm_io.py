@@ -31,7 +31,7 @@ class ImportData(object):
                 pass
             else:
                 raise IOError
-            print('{0} 读入成功'.format(filename))
+            # print('{0} 读入成功'.format(filename))
             # Log.Information('{0} 读入成功'.format(filename))
         except IOError:
             print('{0} 读入失败'.format(filename))
@@ -55,7 +55,7 @@ class ExportResults(object):
             else:
                 raise IOError
             # print(json.dumps(result, ensure_ascii=False, indent=4))
-            print('{0} 写出成功'.format(filename))
+            # print('{0} 写出成功'.format(filename))
             # Log.Information(json.dumps(result, ensure_ascii=False, indent=4))
             # Log.Information('{0} 写出成功'.format(filename))
         except IOError:
