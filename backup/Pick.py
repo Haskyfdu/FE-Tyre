@@ -1,5 +1,5 @@
 import json
-from algorithms.src.core import pick_storage
+from algorithms.src.core.FE_Pick_Storage import pick_storage
 
 with open("order_dict.json", "r", encoding="utf-8") as order_data:
     Order_dict = json.load(order_data)  # 订单

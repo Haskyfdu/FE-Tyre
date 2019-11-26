@@ -12,7 +12,6 @@ import traceback
 import requests
 # from utils.log import Log
 from project_config import AlgorithmConfig, ProjectConfig
-from algorithms.src.core import mysql_io
 
 
 # ==================================================================================================================================================

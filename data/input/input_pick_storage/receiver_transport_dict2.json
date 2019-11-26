@@ -1,0 +1,15 @@
+{
+    "ceoIgaIbTJjYZKHDVSCQsJsosdZPcBeT": {
+        "C001": {
+            "Name": "圆通",
+            "1": {
+                "val": 1.0,
+                "起步": 20.0,
+                "delivery_price": 0,
+                "duration": 0,
+                "receipt_price": 0,
+                "min_price": 0
+            }
+        }
+    }
+}

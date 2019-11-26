@@ -18,7 +18,7 @@ except ImportError:
 from Cython.Distutils import build_ext
 from Cython.Build import cythonize
 
-from algorithm_config import CFG
+from algorithms.algorithm_config import CFG
 
 
 COMPILE_LIST = [

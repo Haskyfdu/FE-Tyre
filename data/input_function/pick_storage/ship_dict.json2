@@ -1,0 +1,32 @@
+{
+    "hl": {
+        "Name": "回力",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "michelin": {
+        "Name": "米其林",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "S004": {
+        "Name": "二批商",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "saichi": {
+        "Name": "赛驰",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    },
+    "tyreplus": {
+        "Name": "驰加",
+        "type_id": 1,
+        "flag": 1,
+        "status": 1
+    }
+}
