@@ -21,7 +21,7 @@ def algorithm_main():
         json_post_information = json.loads(request.get_data())
         if 'Task' in json_post_information and json_post_information['Task'] == 'TSP':
             import _thread
-            _thread.start_new_thread(run_tsp, (json_post_information, ))
+            _thread.start_new_thread(run_tsp, (json_post_information['Date'], ))
             return jsonify({"running status": 'success'})
         else:
             # todo: add new task function

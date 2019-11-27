@@ -9,12 +9,12 @@ import copy
 from algorithms.src.basic.class_tictoc import TicToc
 from algorithms.src.core.FE_TSP.class_FE_tsp_ga import FE_tsp_ga
 
-Station_num_per_route_max = 25
+Station_num_per_route_max = 4
 Volume_limit = 999
 Weight_limit = 999
 Time_limit = 10
 Iteration_times = 1000
-Start_point = {'id': '上海仓',
+Start_point = {'station_id': '0007714793_mdbxGrgFmTzYXMfTIRlHwCybWmfKlsIe',
                'lng': 121.30409,
                'lat': 31.352371,
                'volume': 0,
@@ -30,14 +30,14 @@ def calculate_route(distance_dict, stations):
         route = []
         for i in range(k + 1):
             route.append([copy.copy(Start_point)])
-        TicToc.tic()
+        # TicToc.tic()
         ans = FE_tsp_ga(data=[copy.copy(Start_point)] * (k + 1) + stations,
                         distance_matrix=distance_dict,
                         volume_limit=Volume_limit,
                         time_limit=Time_limit,
                         weight_limit=Weight_limit,
                         iteration_times=Iteration_times)
-        TicToc.toc()
+        # TicToc.toc()
         raw_route = ans['route']
         distance = ans['distance']
         time_used = ans['time']
@@ -46,14 +46,14 @@ def calculate_route(distance_dict, stations):
         station_num = ans['station_num']
         j = 0
         for i in range(len(raw_route)):
-            if raw_route[i]['id'] == Start_point['id']:
+            if raw_route[i]['station_id'] == Start_point['station_id']:
                 j += 1
             else:
                 route[j].append(raw_route[i])
         # del the degraded solution
         del_list_index = []
         for i in range(len(route)):
-            if len(route[i]) == 1 and route[i][0]['id'] == Start_point['id']:
+            if len(route[i]) == 1 and route[i][0]['station_id'] == Start_point['station_id']:
                 del_list_index.append(i)
         for i in range(len(del_list_index)):
             j = del_list_index[len(del_list_index) - 1 - i]
@@ -72,6 +72,8 @@ def calculate_route(distance_dict, stations):
         else:
             k += 1
             add_times += 1
+    for i in range(len(route)):
+        route[i][0]['station_id'] = '上海仓'
     return route, distance, time_used, volume, weight, station_num
 
 

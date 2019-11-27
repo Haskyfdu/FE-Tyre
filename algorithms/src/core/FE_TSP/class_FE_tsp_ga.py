@@ -42,14 +42,15 @@ class TSP(object):
 
     def phased_step(self, station1, station2, phased_distance, phased_time,
                     phased_volume, phased_weight, phased_station_num):
-        if station1['id'] in self.distance_matrix and station2['id'] in self.distance_matrix[station1['id']]:
-            phased_distance += self.distance_matrix[station1['id']][station2['id']][0]
-            phased_time += self.distance_matrix[station1['id']][station2['id']][1]
+        if station1['station_id'] in self.distance_matrix \
+                and station2['station_id'] in self.distance_matrix[station1['station_id']]:
+            phased_distance += self.distance_matrix[station1['station_id']][station2['station_id']][0]
+            phased_time += self.distance_matrix[station1['station_id']][station2['station_id']][1]
             phased_volume += station2['volume']
             phased_weight += station2['weight']
             phased_station_num += 1
         else:
-            print(station1['id'], station2['id'])
+            print(station1['station_id'], station2['station_id'])
             raise TypeError('distance matrix bug')
         return phased_distance, phased_time, \
             phased_volume, phased_weight, phased_station_num
@@ -81,10 +82,10 @@ class TSP(object):
         distance, time, volume, weight, station_num = [], [], [], [], []  # initial routes info
         station1 = self.start_point  # initial the first route info
         station2 = self.stations[order[0]]
-        phased_distance = (self.distance_matrix[station1['id']][station2['id']][0])
-        phased_time = (self.distance_matrix[station1['id']][station2['id']][1])  # measure by seconds
+        phased_distance = (self.distance_matrix[station1['station_id']][station2['station_id']][0])
+        phased_time = (self.distance_matrix[station1['station_id']][station2['station_id']][1])  # measure by seconds
         phased_volume, phased_weight, phased_station_num = self.phased_begin(station2)
-        if station2['id'] == self.start_point['id']:  # make sure station1 is the real start point
+        if station2['station_id'] == self.start_point['station_id']:  # make sure station1 is the real start point
             distance.append(0)
             time.append(0)       # measure by hours
             volume.append(0)
@@ -93,7 +94,7 @@ class TSP(object):
         for i in range(0, len(self.stations) - 1):  # calculate each station info
             index1, index2 = order[i], order[i + 1]
             station1, station2 = self.stations[index1], self.stations[index2]
-            if station2['id'] != self.start_point['id']:
+            if station2['station_id'] != self.start_point['station_id']:
                 phased_distance, phased_time, phased_volume, phased_weight, phased_station_num = \
                     self.phased_step(station1, station2, phased_distance, phased_time,
                                      phased_volume, phased_weight, phased_station_num)
@@ -105,7 +106,7 @@ class TSP(object):
                 phased_weight = 0
                 phased_station_num = 0
                 phased_volume = 0
-        if self.stations[order[-1]]['id'] != self.start_point['id']:
+        if self.stations[order[-1]]['station_id'] != self.start_point['station_id']:
             self.end_route(distance, time, phased_distance, phased_time, phased_station_num,
                            phased_volume, phased_weight, volume, weight, station_num)
         else:

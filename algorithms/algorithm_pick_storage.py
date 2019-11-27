@@ -11,7 +11,7 @@ from algorithms.src.basic.class_tictoc import TicToc
 from algorithms.src.core.FE_Pick_Storage import intra_city, mysql_io_af, automatic_loading, mysql_io
 
 # app = Flask(__name__)
-blueprint_main = Blueprint(name='blueprint_main', import_name=__name__)
+# blueprint_main = Blueprint(name='blueprint_main', import_name=__name__)
 
 
 def update_order(sql):

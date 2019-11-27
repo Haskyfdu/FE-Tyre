@@ -5,7 +5,7 @@
 # Copyright 2019 SAIC Artificial Intelligence Lab. All Rights Reserved.
 # ----------------------------------------------------------------------
 
-from algorithms.algorithm_main_pick_storage import blueprint_main
+from algorithms.algorithm_main import blueprint_main
 from flask import Flask
 
 
