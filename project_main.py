@@ -9,11 +9,12 @@ from algorithms.algorithm_main import blueprint_main
 from flask import Flask
 
 
-if __name__ == '__main__':
+app_test = Flask(__name__)
+app_test.register_blueprint(blueprint_main)
 
-    app_test = Flask(__name__)
-    app_test.register_blueprint(blueprint_main)
-    app_test.run(host="127.0.0.1", port=9000, debug=False)
+
+if __name__ == '__main__':
+    app_test.run(host="127.0.0.1", port=7001, debug=False)
 
     # 模拟某天订单的自动装配及路径规划
     # i = 1

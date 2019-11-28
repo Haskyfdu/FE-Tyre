@@ -8,13 +8,12 @@
 import requests
 
 
-def flask_test():
-    url = 'http://127.0.0.1:9000/run'
+def flask_test(request_url):
     data = {'Date': '2019-11-26', 'Task': 'TSP'}
-    rq = requests.post(url=url, json=data)
+    rq = requests.post(url=request_url, json=data)
     print(rq.text)
 
 
 if __name__ == '__main__':
-
-    flask_test()
+    # flask_test(request_url='http://127.0.0.1:9000/')
+    flask_test(request_url='http://vrp.omnies.com')

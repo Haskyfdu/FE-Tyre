@@ -12,11 +12,11 @@ from algorithms.algorithm_tsp import run_tsp
 blueprint_main = Blueprint(name='blueprint_main', import_name=__name__)
 
 
-@blueprint_main.route('/run', methods=['GET', 'POST'])
+@blueprint_main.route('/', methods=['GET', 'POST'])
 def algorithm_main():
     print('Algorithm started')
     if request.method == 'GET':
-        return jsonify({"description": "Algorithm Post Request", "status": "UP"})
+        return jsonify({"description": "Algorithm Post Request Service", "status": "UP"})
     elif request.method == 'POST':
         json_post_information = json.loads(request.get_data())
         if 'Task' in json_post_information and json_post_information['Task'] == 'TSP':
