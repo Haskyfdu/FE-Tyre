@@ -15,5 +15,5 @@ def flask_test(request_url):
 
 
 if __name__ == '__main__':
-    # flask_test(request_url='http://127.0.0.1:9000/')
-    flask_test(request_url='http://vrp.omnies.com')
+    flask_test(request_url='http://127.0.0.1:7001/')
+    # flask_test(request_url='http://vrp.omnies.com')

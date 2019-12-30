@@ -4,11 +4,12 @@
 # Copyright 2019 SAIC Artificial Intelligence Lab. All Rights Reserved.
 # ----------------------------------------------------------------------
 from algorithms.algorithm_io import ImportData, ExportResults
-from flask import jsonify, request, Blueprint
+from flask import jsonify, request
 import json
 from operator import itemgetter
 from algorithms.src.basic.class_tictoc import TicToc
-from algorithms.src.core.FE_Pick_Storage import intra_city, mysql_io_af, automatic_loading, mysql_io
+from backup.backup_of_pick_storage import intra_city, mysql_io, automatic_loading
+
 
 # app = Flask(__name__)
 # blueprint_main = Blueprint(name='blueprint_main', import_name=__name__)
@@ -21,11 +22,11 @@ def update_order(sql):
     return order_data
 
 
-def update_order2(sql):
-    order_data_af = mysql_io_af.sql_order(sql)
-    # print('{0} 更新成功'.format('order_data_af'))
-    # print('共计' + str(len(order_data_af)) + '个订单')
-    return order_data_af
+# def update_order2(sql):
+#     order_data_af = mysql_io_af.sql_order(sql)
+#     # print('{0} 更新成功'.format('order_data_af'))
+#     # print('共计' + str(len(order_data_af)) + '个订单')
+#     return order_data_af
 
 
 def update_order_list(sql):
@@ -34,10 +35,10 @@ def update_order_list(sql):
     return order_list_data
 
 
-def update_order_list2(sql):
-    order_list_data_af = mysql_io_af.sql_order_list(sql)
-    # print('{0} 更新成功'.format('order_list_data_af'))
-    return order_list_data_af
+# def update_order_list2(sql):
+#     order_list_data_af = mysql_io_af.sql_order_list(sql)
+#     # print('{0} 更新成功'.format('order_list_data_af'))
+#     return order_list_data_af
 
 
 def update_inventory_list(sql):
@@ -47,11 +48,11 @@ def update_inventory_list(sql):
     return inventory_data
 
 
-def update_inventory_list2(sql):
-    # print('读取库存中...')
-    inventory_data_af = mysql_io_af.sql_wms_inventory_list(sql)
-    # print('{0} 更新成功'.format('wms_stock_data_af'))
-    return inventory_data_af
+# def update_inventory_list2(sql):
+#     # print('读取库存中...')
+#     inventory_data_af = mysql_io_af.sql_wms_inventory_list(sql)
+#     # print('{0} 更新成功'.format('wms_stock_data_af'))
+#     return inventory_data_af
 
 
 def run_pick_storage(date0, date1='2049-01-01', num_car=1):

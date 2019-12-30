@@ -1,4 +1,4 @@
-from algorithms.src.core.FE_Pick_Storage.mysql_io import sql_order, sql_order_list
+from backup.backup_of_pick_storage.mysql_io import sql_order, sql_order_list
 from algorithms.algorithm_io import ImportData
 import json
 
