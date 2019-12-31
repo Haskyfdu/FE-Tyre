@@ -38,17 +38,17 @@ def sql_receiver_transport_pick1(sql):
         else:
             street = receiver_transport[8]
         if int(receiver_transport[2]) <= 38:
-            storage = '上海'
+            storage = '000003'
         elif int(receiver_transport[2]) <= 56:
-            storage = '北京'
+            storage = '000010'
         elif int(receiver_transport[2]) <= 62:
-            storage = '成都'
+            storage = '000011'
         elif int(receiver_transport[2]) <= 90:
-            storage = '广州'
+            storage = '000008'
         elif int(receiver_transport[2]) <= 97:
-            storage = '武汉'
+            storage = '000014'
         else:
-            storage = '上海'
+            storage = '000003'
 
         rule_scope.append({'prov': prov,
                            'city': city,

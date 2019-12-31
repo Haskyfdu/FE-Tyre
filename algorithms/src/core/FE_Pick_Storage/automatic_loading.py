@@ -15,7 +15,7 @@ def automatic_loading(order_list, inventory_dict, receiver_dict):
             #                       '体积': cube,
             #                       '重量': weight})
             quantity = order_detail_info['quantity']
-            volume = order_detail_info['quantity'] * order_detail_info['volume']
+            volume = order_detail_info['quantity'] * order_detail_info['cube']
             weight = order_detail_info['quantity'] * order_detail_info['weight']
             cargo_id = order_detail_info['cargo_id']
             if receiver_id in loading_list:
@@ -37,27 +37,34 @@ def automatic_loading(order_list, inventory_dict, receiver_dict):
             cargo_id = order['cargo_id']
             min_fee = -1
             plan = {}
-            for transport in receiver_dict[receiver_id]['pick']:
-                storage_id = transport['storage']
-                if inventory_dict[cargo_id][storage_id]['quantity'] >= order['quantity']:
-                    fee = calculate_fee_step1(quantity=order['quantity'],
-                                              volume=order['volume'],
-                                              weight=order['weight'],
-                                              pricing_id=transport['pricing_id'],
-                                              rule_id=transport['rule_id'])
-                    if fee < min_fee or min_fee < 0:
-                        min_fee = fee
-                        plan = transport
-            order.update({'transport': plan['pricing_id'],
-                          'storage': plan['storage_id'],
-                          'fee_all': min_fee})
+            if receiver_id in receiver_dict:
+                for transport in receiver_dict[receiver_id]['pick']:
+                    storage_id = transport['storage']
+                    if cargo_id in inventory_dict:
+                        if storage_id in inventory_dict[cargo_id] \
+                                and inventory_dict[cargo_id][storage_id] >= order['quantity']:
+                            fee = calculate_fee_step1(quantity=order['quantity'],
+                                                      volume=order['volume'],
+                                                      weight=order['weight'],
+                                                      pricing_id=transport['pricing_id'],
+                                                      rule_id=transport['rule_id'])
+                            if fee < min_fee or min_fee < 0:
+                                min_fee = fee
+                                plan = transport
+                if plan == {}:
+                    order.update({'transport': None})
+                else:
+                    order.update({'transport': plan['pricing_id'],
+                                  'storage': plan['storage'],
+                                  'fee_all': min_fee})
+                    inventory_dict[cargo_id][plan['storage']] -= order['quantity']
     loading_list = better(loading_list)  # todo
-    return loading_list
+    return loading_list, inventory_dict
 
 
 def calculate_fee_step1(quantity, volume, weight, pricing_id, rule_id):
     # todo
-    return 0
+    return 10
 
 
 def better(loading_list):

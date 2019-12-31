@@ -323,5 +323,5 @@ if __name__ == '__main__':
     # wms_inventory_list_data = sql_wms_inventory_list("SELECT * FROM logistics_wms.wms_inventory_list "
     #                                                  "where inventory  > '20190501000' and eid = 'aifuyi';")
     # json_str = json.dumps(wms_inventory_list_data, indent=4, ensure_ascii=False)
-    # with open('wms_inventory_list_dict.json', 'w') as json_file:
+    # with open('inventory_dict_2019-12-30.json', 'w') as json_file:
     #     json_file.write(json_str)

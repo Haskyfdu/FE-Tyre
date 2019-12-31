@@ -26,7 +26,7 @@ for receiver_id in receiver_data:
 json_str = json.dumps(receiver_data, indent=4, ensure_ascii=False)
 with open('../../../../data/input/receiver_dict.json', 'w') as json_file:
     json_file.write(json_str)  # 输出为receiver_dict
-# json_str = json.dumps(receiver_missing_list_data, indent=4, ensure_ascii=False)
-# with open('../../../../data/input/receiver_missing_list.json', 'w') as json_file:
-#     json_file.write(json_str)
+json_str = json.dumps(receiver_missing_list_data, indent=4, ensure_ascii=False)
+with open('../../../../data/input/receiver_missing_list.json', 'w') as json_file:
+    json_file.write(json_str)
 
