@@ -22,6 +22,8 @@ COMPILE_LIST = [
     'src/*.py',
     'src/basic/*.py',
     'src/core/*.py',
+    'src/core/FE_TSP/*.py',
+    'src/core/FE_Pick_Storage/*.py',
     '!src/__init__.py',
     '!src/basic/__init__.py',
     '!src/core/__init__.py'

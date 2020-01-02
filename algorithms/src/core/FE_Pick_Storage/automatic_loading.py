@@ -4,8 +4,14 @@
 # Copyright 2018 SAIC Artificial Intelligence Lab. All Rights Reserved.
 # ----------------------------------------------------------------------
 
-# BigNum = 9
+try:
+    from algorithms.src.core.FE_Pick_Storage.calculate_pricing import price_calculator
+except ImportError:
+    from algorithms.lib.core.FE_Pick_Storage.calculate_pricing import price_calculator
 
+
+
+# BigNum = 9
 
 def automatic_loading(order_list, inventory_dict, receiver_dict):
     loading_list = {}
@@ -38,7 +44,10 @@ def automatic_loading(order_list, inventory_dict, receiver_dict):
                                                     'cargo_id': cargo_id,
                                                     'order_code': order_code,
                                                     'order_detail_code': order_detail_code}]})
+    c = 0
     for receiver_id in loading_list:
+        print(c/len(loading_list))
+        c += 1
         for order in loading_list[receiver_id]:
             cargo_id = order['cargo_id']
             min_fee = -1
@@ -49,11 +58,11 @@ def automatic_loading(order_list, inventory_dict, receiver_dict):
                     if cargo_id in inventory_dict:
                         if storage_id in inventory_dict[cargo_id] \
                                 and inventory_dict[cargo_id][storage_id] >= order['quantity']:
-                            fee = calculate_fee_step1(quantity=order['quantity'],
-                                                      volume=order['volume'],
-                                                      weight=order['weight'],
-                                                      pricing_id=transport['pricing_id'],
-                                                      rule_id=transport['rule_id'])
+                            fee = price_calculator(quantity=order['quantity'],
+                                                   volume=order['volume'],
+                                                   weight=order['weight'],
+                                                   pricing_id=transport['pricing_id'],
+                                                   rule_id=transport['rule_id'])
                             if fee < min_fee or min_fee < 0:
                                 min_fee = fee
                                 plan = transport
@@ -76,11 +85,6 @@ def automatic_loading(order_list, inventory_dict, receiver_dict):
                               'remark': 'no receiver_id'})
     loading_list = better(loading_list)  # todo
     return loading_list, inventory_dict
-
-
-def calculate_fee_step1(quantity, volume, weight, pricing_id, rule_id):
-    # todo
-    return 10
 
 
 def better(loading_list):
