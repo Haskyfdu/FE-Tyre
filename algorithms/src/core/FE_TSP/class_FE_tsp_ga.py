@@ -5,7 +5,10 @@
 # Copyright 2018 SAIC Artificial Intelligence Lab. All Rights Reserved.
 # ----------------------------------------------------------------------
 
-from algorithms.src.core.FE_TSP.class_ga import GA
+try:
+    from algorithms.src.core.FE_TSP.class_ga import GA
+except ImportError:
+    from algorithms.lib.core.FE_TSP.class_ga import GA
 
 
 class TSP(object):
