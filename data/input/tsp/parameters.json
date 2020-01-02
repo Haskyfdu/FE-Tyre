@@ -1,0 +1,15 @@
+{
+    "station_num_per_route_max": 25,
+    "volume_limit": 10,
+    "weight_limit": 2000,
+    "time_limit": 10,
+    "iteration_times": 1000,
+    "start_point": {
+        "station_id": "000003",
+        "lng": 121.30409,
+        "lat": 31.352371,
+        "volume": 0,
+        "weight": 0,
+        "num": 0
+    }
+}

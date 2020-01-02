@@ -314,7 +314,7 @@ if __name__ == '__main__':
     receiver_data, receiver_missing_list_data = sql_receiver(
         "SELECT * FROM logistics_oms.oms_receiver where status > 0 and eid = 'aifuyi';")
     json_str = json.dumps(receiver_data, indent=4, ensure_ascii=False)
-    with open('../../data/input/receiver_dict.json', 'w') as json_file:
+    with open('../../data/input/pick/receiver_dict.json', 'w') as json_file:
         json_file.write(json_str)  # 输出为receiver_dict
     json_str = json.dumps(receiver_missing_list_data, indent=4, ensure_ascii=False)
     with open('../../data/input/receiver_missing_list.json', 'w') as json_file:

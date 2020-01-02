@@ -1,0 +1,538 @@
+[
+    [
+        {
+            "station_id": "000003",
+            "lng": 121.30409,
+            "lat": 31.352371,
+            "volume": 0,
+            "weight": 0,
+            "num": 0,
+            "remark": "起点： 上海仓"
+        },
+        {
+            "order_id": "9157473985060",
+            "station_id": "2100310",
+            "weight": 11.6,
+            "volume": 0.08,
+            "number": 1.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "26239473",
+                    "quantity": 1.0,
+                    "weight": 11.6,
+                    "volume": 0.08
+                }
+            ]
+        },
+        {
+            "order_id": "7157473987785",
+            "station_id": "2100021",
+            "weight": 94.0,
+            "volume": 0.66,
+            "number": 8.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737617",
+                    "quantity": 4.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                },
+                {
+                    "cargo_id": "93737619",
+                    "quantity": 4.0,
+                    "weight": 11.9,
+                    "volume": 0.08
+                }
+            ]
+        },
+        {
+            "order_id": "6157472763765",
+            "station_id": "2100021",
+            "weight": 24.7,
+            "volume": 0.176,
+            "number": 2.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "9027566",
+                    "quantity": 2.0,
+                    "weight": 12.35,
+                    "volume": 0.088
+                }
+            ]
+        },
+        {
+            "order_id": "7157472763198",
+            "station_id": "2100612",
+            "weight": 174.0,
+            "volume": 1.2,
+            "number": 15.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "26239473",
+                    "quantity": 15.0,
+                    "weight": 11.6,
+                    "volume": 0.08
+                }
+            ]
+        },
+        {
+            "order_id": "7157473981089",
+            "station_id": "2100612",
+            "weight": 47.2,
+            "volume": 0.304,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "42566754",
+                    "quantity": 4.0,
+                    "weight": 11.8,
+                    "volume": 0.076
+                }
+            ]
+        },
+        {
+            "order_id": "7157473980989",
+            "station_id": "2100612",
+            "weight": 41.6,
+            "volume": 0.272,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737622",
+                    "quantity": 4.0,
+                    "weight": 10.4,
+                    "volume": 0.068
+                }
+            ]
+        },
+        {
+            "order_id": "8157472763470",
+            "station_id": "2100205",
+            "weight": 20.8,
+            "volume": 0.136,
+            "number": 2.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737622",
+                    "quantity": 2.0,
+                    "weight": 10.4,
+                    "volume": 0.068
+                }
+            ]
+        },
+        {
+            "order_id": "8157472763683",
+            "station_id": "2100205",
+            "weight": 178.4,
+            "volume": 1.33,
+            "number": 18.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "CT19555150",
+                    "quantity": 8.0,
+                    "weight": 7.8,
+                    "volume": 0.06
+                },
+                {
+                    "cargo_id": "CT22560170",
+                    "quantity": 10.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "6157472763563",
+            "station_id": "2100205",
+            "weight": 35.2,
+            "volume": 0.272,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "BS20560160",
+                    "quantity": 4.0,
+                    "weight": 8.8,
+                    "volume": 0.068
+                }
+            ]
+        },
+        {
+            "order_id": "6157473969795",
+            "station_id": "2200179",
+            "weight": 30.599999999999998,
+            "volume": 0.20400000000000001,
+            "number": 3.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737621",
+                    "quantity": 3.0,
+                    "weight": 10.2,
+                    "volume": 0.068
+                }
+            ]
+        },
+        {
+            "order_id": "6157472763360",
+            "station_id": "2100542",
+            "weight": 46.4,
+            "volume": 0.34,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "BS22560170",
+                    "quantity": 4.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "6157481447416",
+            "station_id": "2100542",
+            "weight": 69.6,
+            "volume": 0.51,
+            "number": 6.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737617",
+                    "quantity": 6.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "8157472763278",
+            "station_id": "2100542",
+            "weight": 23.2,
+            "volume": 0.17,
+            "number": 2.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737617",
+                    "quantity": 2.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "9157473965130",
+            "station_id": "2300068",
+            "weight": 65.4,
+            "volume": 0.48,
+            "number": 6.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "26698682",
+                    "quantity": 6.0,
+                    "weight": 10.9,
+                    "volume": 0.08
+                }
+            ]
+        },
+        {
+            "order_id": "7157473980359",
+            "station_id": "2100654",
+            "weight": 46.4,
+            "volume": 0.34,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737617",
+                    "quantity": 4.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "7157473981961",
+            "station_id": "2100562",
+            "weight": 24.7,
+            "volume": 0.176,
+            "number": 2.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "9027566",
+                    "quantity": 2.0,
+                    "weight": 12.35,
+                    "volume": 0.088
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "station_id": "000003",
+            "lng": 121.30409,
+            "lat": 31.352371,
+            "volume": 0,
+            "weight": 0,
+            "num": 0,
+            "remark": "起点： 上海仓"
+        },
+        {
+            "order_id": "9157473987585",
+            "station_id": "2100023",
+            "weight": 46.4,
+            "volume": 0.34,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737617",
+                    "quantity": 4.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "8157481447666",
+            "station_id": "2100130",
+            "weight": 15.6,
+            "volume": 0.12,
+            "number": 2.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "CT19555150",
+                    "quantity": 2.0,
+                    "weight": 7.8,
+                    "volume": 0.06
+                }
+            ]
+        },
+        {
+            "order_id": "9157473986769",
+            "station_id": "2100130",
+            "weight": 89.33,
+            "volume": 0.66,
+            "number": 8.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "26210523",
+                    "quantity": 2.0,
+                    "weight": 11.1,
+                    "volume": 0.085
+                },
+                {
+                    "cargo_id": "90766989",
+                    "quantity": 1.0,
+                    "weight": 9.13,
+                    "volume": 0.065
+                },
+                {
+                    "cargo_id": "90925386",
+                    "quantity": 5.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "9157473986779",
+            "station_id": "2100130",
+            "weight": 10.3,
+            "volume": 0.078,
+            "number": 1.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737616",
+                    "quantity": 1.0,
+                    "weight": 10.3,
+                    "volume": 0.078
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "station_id": "000003",
+            "lng": 121.30409,
+            "lat": 31.352371,
+            "volume": 0,
+            "weight": 0,
+            "num": 0,
+            "remark": "起点： 上海仓"
+        },
+        {
+            "order_id": "8157473980412",
+            "station_id": "2100651",
+            "weight": 24.7,
+            "volume": 0.176,
+            "number": 2.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "9027566",
+                    "quantity": 2.0,
+                    "weight": 12.35,
+                    "volume": 0.088
+                }
+            ]
+        },
+        {
+            "order_id": "9157473980482",
+            "station_id": "2100651",
+            "weight": 46.4,
+            "volume": 0.34,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737617",
+                    "quantity": 4.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "station_id": "000003",
+            "lng": 121.30409,
+            "lat": 31.352371,
+            "volume": 0,
+            "weight": 0,
+            "num": 0,
+            "remark": "起点： 上海仓"
+        },
+        {
+            "order_id": "8157473971988",
+            "station_id": "2101269",
+            "weight": 46.4,
+            "volume": 0.34,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "93737617",
+                    "quantity": 4.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "6157473984155",
+            "station_id": "2100370",
+            "weight": 46.4,
+            "volume": 0.34,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "90925386",
+                    "quantity": 4.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "9157472763373",
+            "station_id": "2100350",
+            "weight": 23.2,
+            "volume": 0.17,
+            "number": 2.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "90925386",
+                    "quantity": 2.0,
+                    "weight": 11.6,
+                    "volume": 0.085
+                }
+            ]
+        },
+        {
+            "order_id": "7157481447521",
+            "station_id": "2100350",
+            "weight": 69.12,
+            "volume": 0.4,
+            "number": 4.0,
+            "address": "xxx",
+            "lng": 121,
+            "lat": 31,
+            "order_details": [
+                {
+                    "cargo_id": "9598549",
+                    "quantity": 4.0,
+                    "weight": 17.28,
+                    "volume": 0.1
+                }
+            ]
+        }
+    ]
+]

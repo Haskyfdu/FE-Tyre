@@ -45,5 +45,9 @@ class AlgorithmConfig(Config):
     Path = {
         'Algorithm_Path': os.path.join(ProjectConfig['Path']['Project_Path'], 'algorithms'),
         'Input_Data_Path': os.path.join(ProjectConfig['Path']['Data_Path'], 'input'),
+        'Input_Data_Path_TSP': os.path.join(ProjectConfig['Path']['Data_Path'], 'input/tsp'),
+        'Input_Data_Path_Pick': os.path.join(ProjectConfig['Path']['Data_Path'], 'input/pick'),
         'Output_Data_Path': os.path.join(ProjectConfig['Path']['Data_Path'], 'output'),
+        'Output_Data_Path_TSP': os.path.join(ProjectConfig['Path']['Data_Path'], 'output/tsp'),
+        'Output_Data_Path_Pick': os.path.join(ProjectConfig['Path']['Data_Path'], 'output/pick'),
     }

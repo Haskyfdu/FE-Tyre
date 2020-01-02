@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # ----------------------------------------------------------------------
-# Copyright 2019 SAIC Artificial Intelligence Lab. All Rights Reserved.
+# Copyright 2018 SAIC Artificial Intelligence Lab. All Rights Reserved.
 # ----------------------------------------------------------------------
 
 import json
 import _thread
 from flask import jsonify, request, Blueprint
-from algorithms.algorithm_tsp import run_tsp
-from algorithms.algorithm_pick import run_pick
+from algorithms.src.core.FE_TSP.algorithm_tsp import run_tsp
+from algorithms.src.core.FE_Pick_Storage.algorithm_pick import run_pick
 
 
 blueprint_main = Blueprint(name='blueprint_main', import_name=__name__)

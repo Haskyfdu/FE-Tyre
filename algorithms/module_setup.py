@@ -18,8 +18,6 @@ except ImportError:
 from Cython.Distutils import build_ext
 from Cython.Build import cythonize
 
-from algorithms.algorithm_config import CFG
-
 
 COMPILE_LIST = [
     'src/*.py',
@@ -37,7 +35,7 @@ class Compile(object):
     def file_compile():
         inclusion_list, exclusion_list = [], []
         for file in COMPILE_LIST:
-            realpath = os.path.join(CFG['CONFIG']['ALGORITHM_PATH'], file)
+            realpath = os.path.join(os.path.realpath('./'), file)
             if '!' not in file:
                 inclusion_list += glob.glob(realpath, recursive=False)
             else:
@@ -56,24 +54,27 @@ class Compile(object):
     #
     @classmethod
     def run(cls):
-        sys.argv.append('install')
+        assert len(sys.argv) == 2, '\nUsage: python module_setup.py [option: install | clean | clear]'
         flag = copy.deepcopy(sys.argv[1])
-        assert sys.argv[1] in ['clean', 'clear', 'build', 'install'], \
-            '\nUsage: python module_setup.py [option: build | install | clean | clear]'
-
-        os.system('rm -rfv ./lib/* && touch ./lib/__init__.py && find ./src -name "*.c" -o -name "*.so" | xargs rm -rfv')
-        if flag in ['build', 'install']:
+        if flag == 'install':
+            os.system(
+                'rm -rfv ./lib/* && touch ./lib/__init__.py && find ./src -name "*.c" -o -name "*.so" | xargs rm -rfv')
             cls.file_compile()
-            if flag == 'install':
-                os.system('cp -rfv ./src/* ./lib/')
-                os.system('find ./src -name "*.c" -o -name "*.so" | xargs rm -rfv')
-                os.system('find ./lib -name "*.c" -o -name "*.py" | grep -v __init__.py | xargs rm -rfv')
+            os.system('cp -rfv ./src/* ./lib/')
+            os.system('find ./src -name "*.c" -o -name "*.so" | xargs rm -rfv')
+            os.system('find ./lib -name "*.c" -o -name "*.py" | grep -v __init__.py | xargs rm -rfv')
+        elif flag == 'clean':
+            os.system(
+                'rm -rfv ./lib/* && touch ./lib/__init__.py && find ./src -name "*.c" -o -name "*.so" | xargs rm -rfv')
         elif flag == 'clear':
-            yes_no = input('\033[1;31mThis command is DANGEROUS! All your source codes will be removed. [Yes(Y) | No(N)]: \033[0m')
-            os.system('rm -rfv ../.git ./src/* && touch ./src/__init__.py') if yes_no in ['y', 'Y', 'yes', 'Yes', 'YES'] else None
-        os.system('rm -rfv ./build ./__pycache__ && echo Complete!"\n"')
+            yes_no = input(
+                '\033[1;31mThis command is DANGEROUS! All your source codes will be removed. [Yes(Y) | No(N)]: \033[0m')
+            os.system('rm -rfv ../.git ./src/* && touch ./src/__init__.py') if yes_no in ['y', 'Y', 'yes', 'Yes',
+                                                                                          'YES'] else None
+        else:
+            assert 0, '\nUsage: python module_setup.py [option: install | clean | clear]'
+        os.system('rm -rfv ./build ./__pycache__ ./dist ./UNKNOWN.egg-info && echo Operation Complete!"\n"')
 
 
 if __name__ == '__main__':
     Compile.run()
-
