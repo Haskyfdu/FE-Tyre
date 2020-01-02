@@ -57,13 +57,23 @@ def automatic_loading(order_list, inventory_dict, receiver_dict):
                             if fee < min_fee or min_fee < 0:
                                 min_fee = fee
                                 plan = transport
+                    else:
+                        plan = {'pricing_id': None,
+                                'storage': None,
+                                'fee_all': None}
+                        order.update({'remark': 'no cargo_id'})
                 if plan == {}:
-                    order.update({'transport': None})
+                    order.update({'transport': None,
+                                  'remark': 'sold out'})
                 else:
                     order.update({'transport': plan['pricing_id'],
                                   'storage': plan['storage'],
                                   'fee_all': min_fee})
-                    inventory_dict[cargo_id][plan['storage']] -= order['quantity']
+                    if plan['storage'] is not None:
+                        inventory_dict[cargo_id][plan['storage']] -= order['quantity']
+            else:
+                order.update({'transport': None,
+                              'remark': 'no receiver_id'})
     loading_list = better(loading_list)  # todo
     return loading_list, inventory_dict
 

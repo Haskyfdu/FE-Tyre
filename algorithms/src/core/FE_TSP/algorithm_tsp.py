@@ -26,8 +26,11 @@ def run_tsp(date):
     route, distance, time_used, volume, weight, station_num \
         = calculate_route(distance_dict=distance_matrix, stations=stations_list, parameters=parameters)
     TicToc.toc()
-    ExportResults.write(route, filename='route_'+date+'.json')
-    print('Optimization completed, the output file: data/output/route_'+date+'.json')
+    ExportResults.write(result=route,
+                        filepath=AlgorithmConfig['Path']['Output_Data_Path_TSP'],
+                        filename='route_'+date+'.json')
+    print('Optimization completed, the output file:',
+          AlgorithmConfig['Path']['Output_Data_Path_TSP']+'/route_'+date+'.json')
     return route, distance, time_used, volume, weight, station_num
 
 
