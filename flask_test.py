@@ -9,7 +9,8 @@ import requests
 
 
 def flask_test(request_url):
-    data = {'Date': '2019-11-26', 'Task': 'TSP'}
+    # data = {'Date': '2019-11-26', 'Task': 'TSP'}
+    data = {'Date': '2019-12-30', 'Task': 'Pick'}
     rq = requests.post(url=request_url, json=data)
     print(rq.text)
 

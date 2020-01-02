@@ -1,3 +1,4 @@
+pandas
 # requirements list
 
 # application dependencies

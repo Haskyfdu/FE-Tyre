@@ -7,9 +7,12 @@
 import json
 import _thread
 from flask import jsonify, request, Blueprint
-from algorithms.src.core.FE_TSP.algorithm_tsp import run_tsp
-from algorithms.src.core.FE_Pick_Storage.algorithm_pick import run_pick
-
+try:
+    from algorithms.src.core.FE_TSP.algorithm_tsp import run_tsp
+    from algorithms.src.core.FE_Pick_Storage.algorithm_pick import run_pick
+except ImportError:
+    from algorithms.lib.core.FE_TSP.algorithm_tsp import run_tsp
+    from algorithms.lib.core.FE_Pick_Storage.algorithm_pick import run_pick
 
 blueprint_main = Blueprint(name='blueprint_main', import_name=__name__)
 

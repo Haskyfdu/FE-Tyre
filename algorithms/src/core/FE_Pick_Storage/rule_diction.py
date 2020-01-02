@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# ----------------------------------------------------------------------
+# Copyright 2018 SAIC Artificial Intelligence Lab. All Rights Reserved.
+# ----------------------------------------------------------------------
+
 from collections import defaultdict
 import math
 data_info = defaultdict(str)
