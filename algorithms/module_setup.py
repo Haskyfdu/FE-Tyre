@@ -5,10 +5,9 @@
 # Copyright 2018 SAIC Artificial Intelligence Lab. All Rights Reserved.
 # ----------------------------------------------------------------------
 
-
 import os
-import sys
 import copy
+import sys
 import glob
 
 try:
@@ -69,8 +68,8 @@ class Compile(object):
         elif flag == 'clear':
             yes_no = input(
                 '\033[1;31mThis command is DANGEROUS! All your source codes will be removed. [Yes(Y) | No(N)]: \033[0m')
-            os.system('rm -rfv ../.git ./src/* && touch ./src/__init__.py') if yes_no in ['y', 'Y', 'yes', 'Yes',
-                                                                                          'YES'] else None
+            os.system('rm -rfv ../.git ./src/* && touch ./src/__init__.py') \
+                if yes_no in ['y', 'Y', 'yes', 'Yes', 'YES'] else None
         else:
             assert 0, '\nUsage: python module_setup.py [option: install | clean | clear]'
         os.system('rm -rfv ./build ./__pycache__ ./dist ./UNKNOWN.egg-info && echo Operation Complete!"\n"')
