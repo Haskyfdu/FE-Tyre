@@ -1,3 +1,5 @@
+
+
 pandas
 # requirements list
 
@@ -15,6 +17,6 @@ gevent>=1.4.0
 # algorithm dependencies
 cython>=0.29.7
 numpy>=1.16.3
-scipy>=1.2.1
+cipy>=1.2.1
 pymysql>=0.9.3
 

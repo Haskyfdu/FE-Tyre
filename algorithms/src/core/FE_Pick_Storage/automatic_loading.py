@@ -10,7 +10,6 @@ except ImportError:
     from algorithms.lib.core.FE_Pick_Storage.calculate_pricing import price_calculator
 
 
-
 # BigNum = 9
 
 def automatic_loading(order_list, inventory_dict, receiver_dict):

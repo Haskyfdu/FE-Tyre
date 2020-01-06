@@ -4,7 +4,7 @@
 # Copyright 2018 SAIC Artificial Intelligence Lab. All Rights Reserved.
 # ----------------------------------------------------------------------
 
-from algorithms.algorithm_io import ImportData, ExportResults
+from algorithms.algorithm_io import ImportData
 from project_config import AlgorithmConfig
 try:
     from algorithms.src.core.FE_Pick_Storage import rule_diction
@@ -17,7 +17,13 @@ def price_calculator(pricing_id, rule_id, weight, volume, quantity):
                                      filename='pricing_rule.json')
     if (str(pricing_id) + str(rule_id)) in result_program:
         price_parameter = result_program[str(pricing_id) + str(rule_id)]
-        fee = rule_diction.rule_function_dict[price_parameter['type']](price_parameter, weight, volume, quantity)
+        if price_parameter['type'] == 999:
+            fee = -1
+        else:
+            fee = rule_diction.rule_function_dict[price_parameter['type']](price_parameter=price_parameter,
+                                                                           order={'weight': weight,
+                                                                                  'volume': volume,
+                                                                                  'quantity': quantity})
     else:
         return -1
     if isinstance(fee, str):
