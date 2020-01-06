@@ -19,8 +19,8 @@ def f110(price_parameter, order_info):
     if weight <= price_parameter['val'][0]:
         fee = price_parameter['fee'][0]
     else:
-        i = len([n for n in price_parameter['val'] if n <= weight])-1
-        fee = weight*price_parameter['fee'][i] + price_parameter['quick_calculation_deductions'][i-1]
+        i = len([n for n in price_parameter['val'] if n <= weight]) - 1
+        fee = weight*price_parameter['fee'][i] + price_parameter['quick_calculation_deductions'][i]
     return fee
 
 
@@ -37,7 +37,7 @@ def f111(price_parameter, order_info):
         fee = -1
     else:
         i = len([n for n in price_parameter['val'] if n <= weight]) - 1
-        fee = weight*price_parameter['fee'][i] + price_parameter['quick_calculation_deductions'][i-1]
+        fee = weight*price_parameter['fee'][i] + price_parameter['quick_calculation_deductions'][i]
     return fee
 
 
@@ -73,9 +73,9 @@ def f114(price_parameter, order_info):
     if weight < 1:
         fee = price_parameter['fee'][0]
     elif weight < 30:
-        fee = price_parameter['fee_accumulation'][0] + (weight - 1) * price_parameter['fee'][1]
+        fee = price_parameter['quick_calculation_deductions'][0] + (weight - 1) * price_parameter['fee'][1]
     else:
-        fee = price_parameter['fee_accumulation'][1] + (weight - 30) * price_parameter['fee'][2]
+        fee = price_parameter['quick_calculation_deductions'][1] + (weight - 30) * price_parameter['fee'][2]
     return fee
 
 
@@ -91,7 +91,7 @@ def f116(price_parameter, order_info):
     if weight <= price_parameter['val'][0]:
         fee = price_parameter['fee'][0]
     elif weight <= price_parameter['val'][1]:
-        fee = price_parameter['fee_accumulation'][0] + \
+        fee = price_parameter['quick_calculation_deductions'][0] + \
               (weight-price_parameter['val'][0])*price_parameter['fee'][1]
     else:
         fee = -1
@@ -108,7 +108,7 @@ def f117(price_parameter, order_info):
     if weight <= price_parameter['val'][0]:
         fee = price_parameter['fee'][0]
     else:
-        fee = price_parameter['fee_accumulation'][0] + \
+        fee = price_parameter['quick_calculation_deductions'][0] + \
               (weight-price_parameter['val'][0])*price_parameter['fee'][1]
     return fee
 
@@ -137,7 +137,7 @@ def f180(price_parameter, order_info):
     if weight <= price_parameter['val'][0]:
         fee = price_parameter['fee'][0]
     elif weight <= price_parameter['val'][1]:
-        fee = price_parameter['fee_accumulation'][0] + \
+        fee = price_parameter['quick_calculation_deductions'][0] + \
               (weight - price_parameter['val'][0]) * price_parameter['fee'][1]
     else:
         fee = -1
@@ -155,7 +155,7 @@ def f181(price_parameter, order_info):
     if weight <= price_parameter['val'][0]:
         fee = price_parameter['fee'][0]
     else:
-        fee = price_parameter['fee_accumulation'][0] + \
+        fee = price_parameter['quick_calculation_deductions'][0] + \
               (weight - price_parameter['val'][0]) * price_parameter['fee'][1]
     return fee
 
@@ -172,7 +172,7 @@ def f190(price_parameter, order_info):
     if weight <= price_parameter['val'][0]:
         fee = price_parameter['fee'][0]
     else:
-        fee = price_parameter['fee_accumulation'][0] + \
+        fee = price_parameter['quick_calculation_deductions'][0] + \
                (weight - price_parameter['val'][0]) * price_parameter['fee'][1]
     return fee
 
@@ -238,7 +238,7 @@ def f331(price_parameter, order_info):
     if quantity <= price_parameter['val'][0]:
         fee = quantity * price_parameter['fee'][0]
     else:
-        fee = price_parameter['fee_accumulation'][0] + \
+        fee = price_parameter['quick_calculation_deductions'][0] + \
               (quantity - price_parameter['val'][0]) * price_parameter['fee'][1]
     return fee
 
@@ -253,7 +253,7 @@ def f332(price_parameter, order_info):
     if quantity <= 100:
         fee = quantity * price_parameter['fee'][0]
     else:
-        fee = price_parameter['fee_accumulation'][0] + \
+        fee = price_parameter['quick_calculation_deductions'][0] + \
               (quantity - 100) * price_parameter['fee'][1]
     return fee
 
@@ -298,7 +298,7 @@ def f470(price_parameter, order_info):
     if volume <= 0.5:
         fee = volume * price_parameter['fee'][0]
     else:
-        fee = price_parameter['fee_accumulation'][0] + \
+        fee = price_parameter['quick_calculation_deductions'][0] + \
               (volume - 0.5) * price_parameter['fee'][1]
     return fee
 
@@ -316,7 +316,7 @@ def f770(price_parameter, order_info):
     if quantity <= 100:
         fee = quantity * price_parameter['fee'][0]
     else:
-        fee = price_parameter['fee_accumulation'][0] + \
+        fee = price_parameter['quick_calculation_deductions'][0] + \
                (quantity - 100) * price_parameter['fee'][1]
     return fee
 

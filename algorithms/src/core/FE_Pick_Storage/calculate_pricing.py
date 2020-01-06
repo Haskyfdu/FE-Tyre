@@ -21,15 +21,16 @@ def price_calculator(pricing_id, rule_id, weight, volume, quantity):
             fee = -1
         else:
             fee = rule_diction.rule_function_dict[price_parameter['type']](price_parameter=price_parameter,
-                                                                           order={'weight': weight,
-                                                                                  'volume': volume,
-                                                                                  'quantity': quantity})
+                                                                           order_info={'weight': weight,
+                                                                                       'volume': volume,
+                                                                                       'quantity': quantity})
     else:
         return -1
-    if isinstance(fee, str):
+    if isinstance(fee, str) or not (isinstance(price_parameter['fee_least'], float)
+                                    or isinstance(price_parameter['fee_least'], int)):
         return -1
     else:
-        return fee + price_parameter['fee_extra_sum']
+        return max(fee + price_parameter['fee_extra_sum'], price_parameter['fee_least'])
 
 
 if __name__ == '__main__':

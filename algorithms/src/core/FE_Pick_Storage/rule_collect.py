@@ -118,7 +118,7 @@ def data_processing():
 
         fee_info['type_id'] = list2int_same(fee_info['type_id_list'])
         fee_info['algo'] = list2int_same(fee_info['algo_list'])
-        fee_info['fee_accumulation'] = fee_info['fee'].copy()
+        fee_info['quick_calculation_deductions'] = fee_info['fee'].copy()
         if fee_info['fee_handling'] != -1 and fee_info['fee_delivery'] != -1 and fee_info['fee_receipt'] != -1:
             fee_info['fee_extra_sum'] = fee_info['fee_handling'] + fee_info['fee_delivery'] + fee_info['fee_receipt']
         else:
@@ -137,10 +137,10 @@ def data_processing():
                     and fee_info['algo_list'] == [1, 1, 4] \
                     and fee_info['cond'] == ['<=', '<', '>='] \
                     and fee_info['val'] == [1, 30, 30]:
-                fee_info['fee_accumulation'] = \
+                fee_info['quick_calculation_deductions'] = \
                     [fee_info['fee'][0] -
                      fee_info['val'][0] * fee_info['fee'][1],
-                     fee_info['fee_accumulation'][0] +
+                     fee_info['quick_calculation_deductions'][0] +
                      fee_info['val'][1] * fee_info['fee'][1] -
                      fee_info['val'][1] * fee_info['fee'][2]]
                 dict_program, dict_development = data_save2dict(114, fee_info, dict_program, dict_development)
@@ -161,23 +161,23 @@ def data_processing():
                             and fee_info['cond'] == (['<='] * (size - 1) + ['>']) \
                             and (fee_info['val'][size - 2] == fee_info['val'][size - 1]) \
                             and len(set(fee_info['val'])) == (size - 1):
-                        fee_info['fee_accumulation'][0] = \
+                        fee_info['quick_calculation_deductions'][0] = \
                             fee_info['fee'][0] - \
                             fee_info['val'][0] * fee_info['fee'][1]
-                        for q in range(1, len(fee_info['fee_accumulation']) - 1):
-                            fee_info['fee_accumulation'][q] = \
-                                fee_info['fee_accumulation'][q-1] + \
+                        for q in range(1, len(fee_info['quick_calculation_deductions']) - 1):
+                            fee_info['quick_calculation_deductions'][q] = \
+                                fee_info['quick_calculation_deductions'][q-1] + \
                                 fee_info['val'][q] * fee_info['fee'][q] - \
                                 fee_info['val'][q] * fee_info['fee'][q+1]
                         dict_program, dict_development = data_save2dict(110, fee_info, dict_program, dict_development)
                     elif fee_info['cond'] == (['<='] * size) \
                             and len(set(fee_info['val'])) == size:
-                        fee_info['fee_accumulation'][0] = \
+                        fee_info['quick_calculation_deductions'][0] = \
                             fee_info['fee'][0] - \
                             fee_info['val'][0] * fee_info['fee'][1]
-                        for q in range(1, len(fee_info['fee_accumulation']) - 1):
-                            fee_info['fee_accumulation'][q] = \
-                                fee_info['fee_accumulation'][q - 1] + \
+                        for q in range(1, len(fee_info['quick_calculation_deductions']) - 1):
+                            fee_info['quick_calculation_deductions'][q] = \
+                                fee_info['quick_calculation_deductions'][q - 1] + \
                                 fee_info['val'][q] * fee_info['fee'][q] - \
                                 fee_info['val'][q] * fee_info['fee'][q + 1]
                         dict_program, dict_development = data_save2dict(111, fee_info, dict_program, dict_development)
@@ -199,13 +199,13 @@ def data_processing():
                         dict_program, dict_development = data_save2dict(115, fee_info, dict_program, dict_development)
                     elif fee_info['cond'] == ['<=', '<='] \
                             and fee_info['val'][0] < fee_info['val'][1]:
-                        fee_info['fee_accumulation'][0] = \
+                        fee_info['quick_calculation_deductions'][0] = \
                             fee_info['fee'][0] - \
                             fee_info['val'][0] * fee_info['fee'][1]
                         dict_program, dict_development = data_save2dict(116, fee_info, dict_program, dict_development)
                     elif fee_info['cond'] == ['<=', '>'] \
                             and fee_info['val'][0] == fee_info['val'][1]:
-                        fee_info['fee_accumulation'][0] = \
+                        fee_info['quick_calculation_deductions'][0] = \
                             fee_info['fee'][0] - \
                             fee_info['val'][0] * fee_info['fee'][1]
                         dict_program, dict_development = data_save2dict(117, fee_info, dict_program, dict_development)
@@ -223,13 +223,13 @@ def data_processing():
             elif fee_info['algo'] == 8:
                 if fee_info['cond'] == ['<=', '<='] \
                         and fee_info['val'][0] < fee_info['val'][1]:
-                    fee_info['fee_accumulation'][0] = \
+                    fee_info['quick_calculation_deductions'][0] = \
                         fee_info['fee'][0] - \
                         fee_info['val'][0] * fee_info['fee'][1]
                     dict_program, dict_development = data_save2dict(180, fee_info, dict_program, dict_development)
                 elif fee_info['cond'] == ['<=', '>'] \
                         and fee_info['val'][0] == fee_info['val'][1]:
-                    fee_info['fee_accumulation'][0] = \
+                    fee_info['quick_calculation_deductions'][0] = \
                         fee_info['fee'][0] - \
                         fee_info['val'][0] * fee_info['fee'][1]
                     dict_program, dict_development = data_save2dict(181, fee_info, dict_program, dict_development)
@@ -238,7 +238,7 @@ def data_processing():
             elif fee_info['algo'] == 9:
                 if fee_info['cond'] == ['<=', '>'] \
                         and fee_info['val'] == [1, 1]:
-                    fee_info['fee_accumulation'][0] = \
+                    fee_info['quick_calculation_deductions'][0] = \
                         fee_info['fee'][0] - \
                         fee_info['val'][0] * fee_info['fee'][1]
                     dict_program, dict_development = data_save2dict(190, fee_info, dict_program, dict_development)
@@ -272,7 +272,7 @@ def data_processing():
                 elif size == 2 \
                         and fee_info['cond'] == ['<=', '>'] \
                         and fee_info['val'][0] == fee_info['val'][1] == 1:
-                    fee_info['fee_accumulation'][0] = \
+                    fee_info['quick_calculation_deductions'][0] = \
                         fee_info['fee'][0] - \
                         fee_info['val'][0] * fee_info['fee'][1]
                     dict_program, dict_development = data_save2dict(331, fee_info, dict_program, dict_development)
