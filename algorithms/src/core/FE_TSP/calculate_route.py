@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# ----------------------------------------------------------------------
-# Copyright 2018 SAIC Artificial Intelligence Lab. All Rights Reserved.
-# ----------------------------------------------------------------------
 
 import copy
 from algorithms.src.basic.class_tictoc import TicToc

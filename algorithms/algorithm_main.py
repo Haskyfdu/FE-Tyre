@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# ----------------------------------------------------------------------
-# Copyright 2019 SAIC Artificial Intelligence Lab. All Rights Reserved.
-# ----------------------------------------------------------------------
+
 
 import json
 from flask import jsonify, request, Blueprint
