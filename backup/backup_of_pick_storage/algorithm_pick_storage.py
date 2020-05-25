@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# ----------------------------------------------------------------------
-# Copyright 2019 SAIC Artificial Intelligence Lab. All Rights Reserved.
-# ----------------------------------------------------------------------
+
+
 from algorithms.algorithm_io import ImportData, ExportResults
 from flask import jsonify, request
 import json

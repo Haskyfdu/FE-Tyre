@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# ----------------------------------------------------------------------
-# Copyright 2018 SAIC Artificial Intelligence Lab. All Rights Reserved.
-# ----------------------------------------------------------------------
+
 
 try:
     from algorithms.src.core.FE_Pick_Storage.calculate_pricing import price_calculator
